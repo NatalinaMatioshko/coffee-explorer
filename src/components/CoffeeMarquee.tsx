@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 
-// Імпорт твоїх картинок
 import coffee1 from "../assets/img/coffee-bean-samples.webp";
 import coffee2 from "../assets/img/coffee-beans-burlap-bag.webp";
 import coffee3 from "../assets/img/coffee-pour-action.webp";
@@ -60,7 +59,6 @@ const CoffeeMarquee = () => {
       <h2 className="sr-only">Coffee Projects Showcase</h2>
 
       <div className="relative">
-        {/* Gradient overlays для smooth fade */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-gray-900 to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-gray-900 to-transparent z-10" />
 
@@ -80,7 +78,7 @@ const CoffeeMarquee = () => {
             </div>
           ))}
 
-          {/* Дублюємо для безперервного loop */}
+          {/* для безперервного loop */}
           {coffeeImages.map((img, index) => (
             <div
               key={`second-${index}`}

@@ -4,7 +4,6 @@
   .title-shimmer {
     text-transform: none;
 
-    /* Твій градієнт */
     background: linear-gradient(
       150deg,
       #fefbf3 15%,
@@ -13,7 +12,6 @@
       #fefbf3 100%
     );
 
-    /* Магія обрізки */
     -webkit-background-clip: text;
     background-clip: text;
 
@@ -21,16 +19,18 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
 
-    /* Розмір фону, щоб було що рухати */
-    background-size: 250% 100%; /* Збільшив, щоб плавно їхало */
+    background-size: 250% 100%;
 
-    /* Анімація */
     animation: gradient 5s linear infinite;
   }
 
   /* НОВА Marquee анімація */
   .animate-marquee {
-    animation: marqueeScroll 20s linear infinite;
+    animation: marqueeScroll 10s linear infinite;
+    will-change: transform;
+  }
+  .animate-marquee2 {
+    animation: marqueeScroll 60s linear infinite;
     will-change: transform;
   }
 
@@ -39,17 +39,16 @@
       transform: translateX(0);
     }
     100% {
-      /* Зсув на половину ширини (оскільки контент продубльований) */
       transform: translateX(-50%);
     }
   }
 
-  /* Пауза на hover (опціонально) */
-  .animate-marquee:hover {
+  */
+  /* .animate-marquee:hover {
     animation-play-state: paused;
-  }
+  } */
 
-  /* Slide-in анімація для меню */
+  /*  анімація для меню */
   .animate-slide-in {
     animation: slideIn 0.3s ease-out;
   }
@@ -64,7 +63,6 @@
   }
 }
 
-/* Сама анімація */
 @keyframes gradient {
   0% {
     background-position: 100% 0;

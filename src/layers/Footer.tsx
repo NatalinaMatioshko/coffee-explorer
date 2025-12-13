@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
             </a>
           </div>
           <div>
-            {" "}
             <ul className="flex flex-col gap-2 md:gap-1 lg:gap-2  xl:text-sm text-base tracking-widest font-light uppercase">
               {menuList.map((item, index) => (
                 <li
@@ -35,8 +34,9 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          <div className="max-w-40">
-            Work hours Monday-Friday from 9 a.m. to 6 p.m.
+          <div className="max-w-26">
+            <h3 className="font-extrabold">Work hours</h3>
+            <p> Monday-Friday from 9 a.m. to 6 p.m.</p>
           </div>
           <div className="flex gap-5">
             <a href="">
