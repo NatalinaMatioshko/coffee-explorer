@@ -2,15 +2,18 @@ import logo from "../assets/svg/logo.svg";
 import searchIcon from "../assets/svg/search.svg";
 import { useState } from "react";
 import Logo from "../components/Logo";
+// import ThemeToggle from "../components/ThemeToggle";
 
-const menuList = ["Menu", "Beans", "Courses", "Partners"];
+const menuList = ["Menu", "Beans", "Courses", "Contacts"];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
-      <header className="w-full flex justify-between items-center py-6 px-4 md:px-8 text-white z-50 bg-[#4f2d20] md:bg-black/10 md:backdrop-blur-sm">
+      <header className="w-full flex justify-between items-center py-2 px-4 md:px-8 text-white z-50 bg-[#4f2d20] md:bg-transparent">
+        {/* md:bg-black/10 md:backdrop-blur-sm */}
+
         {/* ЛІВА ЧАСТИНА: Burger (mobile) + Логотип */}
         <div className="flex items-center gap-4">
           {/* Burger Menu - тільки на mobile/tablet */}
@@ -60,14 +63,15 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* ПРАВА ЧАСТИНА: Пошук + Кошик */}
+        {/* ПРАВА ЧАСТИНА: Пошук + Тема +  Кошик */}
+
         <div className="flex items-center gap-2 md:gap-4">
-          <div className="hidden lg:flex items-center border border-white rounded-full px-4 py-2 w-64 hover:bg-white/10 transition-colors group">
+          <div className="hidden lg:flex items-center border border-white  rounded-full px-4 py-2 w-64 hover:bg-white/10 transition-colors group">
             <img src={searchIcon} className="w-4 h-4" alt="Search" />
             <input
               type="text"
               placeholder="Search ..."
-              className="bg-transparent border-none outline-none text-sm ml-3 text-white placeholder-gray-300 w-full"
+              className="bg-transparent border-none outline-none text-sm ml-3 text-white  placeholder-gray-300    w-full"
             />
           </div>
 
@@ -76,8 +80,11 @@ const Header = () => {
             <img src={searchIcon} className="w-5 h-5" alt="Search" />
           </button>
 
+          {/* Theme Toggle */}
+          {/* <ThemeToggle /> */}
+
           {/* Кошик */}
-          <div className="flex items-center justify-center w-10 h-10 border border-white rounded-full cursor-pointer hover:bg-white text-white hover:text-amber-950 transition-all duration-300 group">
+          <div className="flex items-center justify-center w-10 h-10 border border-white  rounded-full cursor-pointer hover:bg-white text-white hover:text-amber-950  transition-all duration-300 group">
             <svg
               className="w-5 h-5 stroke-[1.5] group-hover:stroke-[2.5] transition-all duration-300"
               viewBox="0 0 31 31"

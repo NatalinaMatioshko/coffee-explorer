@@ -1,6 +1,6 @@
 // import logo from "../assets/svg/logo.svg";
 import Logo from "../components/Logo";
-const menuList = ["Menu", "Beans", "Courses", "Partners"];
+const menuList = ["Menu", "Beans", "Courses", "Contacts"];
 const Footer: React.FC = () => {
   return (
     <>
@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         className="flex w-full items-center gap-10  py-6 px-4 md:px-8 bg-[#4f2d20]  flex-col text-amber-50
 "
       >
-        <div className="flex justify-between   items-center gap-40">
+        <div className="flex flex-wrap justify-center   items-center gap-40">
           <div>
             {/* Логотип */}
             <Logo />
