@@ -1,6 +1,7 @@
 import logo from "../assets/svg/logo.svg";
 import searchIcon from "../assets/svg/search.svg";
 import { useState } from "react";
+import Logo from "../components/Logo";
 
 const menuList = ["Menu", "Beans", "Courses", "Partners"];
 
@@ -34,13 +35,14 @@ const Header = () => {
           </button>
 
           {/* Логотип */}
-          <a href="/index.html" className="hover:opacity-80 transition-opacity">
+          <Logo />
+          {/* <a href="/index.html" className="hover:opacity-80 transition-opacity">
             <img
               src={logo}
               className="w-32 md:w-40 h-auto object-contain"
               alt="Coffee Explorer"
             />
-          </a>
+          </a> */}
         </div>
 
         {/* ЦЕНТРАЛЬНА ЧАСТИНА: Меню (тільки desktop) */}
@@ -60,7 +62,6 @@ const Header = () => {
 
         {/* ПРАВА ЧАСТИНА: Пошук + Кошик */}
         <div className="flex items-center gap-2 md:gap-4">
-       
           <div className="hidden lg:flex items-center border border-white rounded-full px-4 py-2 w-64 hover:bg-white/10 transition-colors group">
             <img src={searchIcon} className="w-4 h-4" alt="Search" />
             <input

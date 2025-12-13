@@ -1,4 +1,5 @@
-import logo from "../assets/svg/logo.svg";
+// import logo from "../assets/svg/logo.svg";
+import Logo from "../components/Logo";
 const menuList = ["Menu", "Beans", "Courses", "Partners"];
 const Footer: React.FC = () => {
   return (
@@ -10,7 +11,8 @@ const Footer: React.FC = () => {
         <div className="flex justify-between   items-center gap-40">
           <div>
             {/* Логотип */}
-            <a
+            <Logo />
+            {/* <a
               href="/index.html"
               className="hover:opacity-80 transition-opacity"
             >
@@ -19,7 +21,7 @@ const Footer: React.FC = () => {
                 className="w-32 md:w-40 h-auto object-contain"
                 alt="Coffee Explorer"
               />
-            </a>
+            </a> */}
           </div>
           <div>
             <ul className="flex flex-col gap-2 md:gap-1 lg:gap-2  xl:text-sm text-base tracking-widest font-light uppercase">
@@ -41,7 +43,7 @@ const Footer: React.FC = () => {
           <div className="flex gap-5">
             <a href="">
               <svg
-                width="48"
+                width="32"
                 viewBox="0 0 48 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +64,8 @@ const Footer: React.FC = () => {
             </a>
             <a href="">
               <svg
-                width="48"
-                height="48"
+                width="32"
+                height="32"
                 viewBox="0 0 48 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

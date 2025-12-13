@@ -3,7 +3,8 @@ import Header from "../layers/Header";
 import bgImage from "../assets/img/bg-img.png";
 import CoffeeMarquee from "../components/CoffeeMarquee";
 import Marquee from "../components/Marquee";
-import NewsSection from "../components/sections/NewsSection";
+
+import CoffeeNewsSection from "../components/sections/CoffeeNewsSection";
 // import HowWeBrew from "../components/HowWeBrew";
 
 const Home: React.FC = () => {
@@ -36,7 +37,7 @@ const Home: React.FC = () => {
         <Marquee />
         {/* <HowWeBrew imageSrc="../assets/img/coffee-pour-action.webp" /> */}
       </div>
-      <NewsSection />
+      <CoffeeNewsSection />
       {/* Marquee Section - поза hero */}
       <CoffeeMarquee />
     </>
