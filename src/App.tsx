@@ -1,16 +1,28 @@
 import "./App.css";
 import Footer from "./layers/Footer";
-import Home from "./pages/HomePage";
+import Header from "./layers/Header";
+import HomePage from "./pages/HomePage";
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
     <>
-      <Home />
-      <main></main>
+      <Header />
+      <main>
+        <HomePage />
+      </main>
       <Footer />
     </>
+    //
+    //   <Routes>
+    //     <Route path="/" element={<HomePage />} />
+    //     <Route path="/menu" element={<MenuPage />} />
+    //     <Route path="/beans" element={<BeansPage />} />
+    //     <Route path="/courses" element={<CoursesPage />} />
+    //     <Route path="/partners" element={<PartnersPage />} />
+    //   </Routes>
+    //   <Footer />
   );
 }
 

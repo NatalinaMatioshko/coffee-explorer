@@ -1,8 +1,9 @@
 import logo from "../assets/svg/logo.svg";
 import searchIcon from "../assets/svg/search.svg";
 import { useState } from "react";
-import Logo from "../components/Logo";
+import Logo from "../components/Logo.tsx";
 // import ThemeToggle from "../components/ThemeToggle";
+import { FaUserAlt } from "react-icons/fa";
 
 const menuList = ["Menu", "Beans", "Courses", "Contacts"];
 
@@ -11,7 +12,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full flex justify-between items-center py-2 px-4 md:px-8 text-white z-50 bg-[#4f2d20] md:bg-transparent">
+      <header className="absolute w-full flex justify-between items-center py-2 px-4 md:px-8 text-white z-50 bg-[#4f2d20] md:bg-transparent">
         {/* md:bg-black/10 md:backdrop-blur-sm */}
 
         {/* ЛІВА ЧАСТИНА: Burger (mobile) + Логотип */}
@@ -74,15 +75,12 @@ const Header = () => {
               className="bg-transparent border-none outline-none text-sm ml-3 text-white  placeholder-gray-300    w-full"
             />
           </div>
-
           {/* Іконка пошуку для mobile/tablet */}
           <button className="lg:hidden p-2 hover:bg-white/10 rounded-full transition-colors">
             <img src={searchIcon} className="w-5 h-5" alt="Search" />
           </button>
-
           {/* Theme Toggle */}
           {/* <ThemeToggle /> */}
-
           {/* Кошик */}
           <div className="flex items-center justify-center w-10 h-10 border border-white  rounded-full cursor-pointer hover:bg-white text-white hover:text-amber-950  transition-all duration-300 group">
             <svg
@@ -99,6 +97,9 @@ const Header = () => {
               />
             </svg>
           </div>
+          <button className=" flex items-center justify-center w-10 h-10 border border-white  rounded-full cursor-pointer hover:bg-white text-white hover:text-amber-950  transition-all duration-300 group">
+            <FaUserAlt />
+          </button>
         </div>
       </header>
 
