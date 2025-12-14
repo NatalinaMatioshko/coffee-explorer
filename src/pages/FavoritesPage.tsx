@@ -7,7 +7,7 @@ const FavoritesPage: React.FC = () => {
     <>
       <Header />
       <div className="min-h-screen bg-[#fefbf3] py-20 px-4">
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-360 mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-[#4f2d20] mb-8">
             Your Favorites
           </h1>

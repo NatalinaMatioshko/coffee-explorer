@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCoffeeNews, type CoffeeNewsItem } from "../../api/coffeeNewsApi";
+import { getCoffeeNews, type CoffeeNewsItem } from "../api/coffeeNewsApi";
 
 export default function CoffeeNewsSection() {
   const [news, setNews] = useState<CoffeeNewsItem[]>([]);

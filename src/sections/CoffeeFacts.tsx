@@ -1,6 +1,6 @@
 import React from "react";
-import coffeeOrigin from "../../assets/img/ethiopia.webp";
-import coffeeRoasting from "../../assets/img/roaster.webp";
+import coffeeOrigin from "../assets/img/ethiopia.webp";
+import coffeeRoasting from "../assets/img/roaster.webp";
 
 const factsData = [
   {

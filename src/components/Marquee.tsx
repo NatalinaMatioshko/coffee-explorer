@@ -5,7 +5,7 @@ const Marquee = () => {
         {Array.from({ length: 10 }).map((_, i) => (
           <span
             key={i}
-            className="mx-8 text-lg font-light tracking-wide text-neutral-100"
+            className="mx-8 text-lg font-light tracking-wide text-[#f9f3e9]"
           >
             Where beans become experiences
           </span>
