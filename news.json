@@ -1,0 +1,31 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Washed vs Natural: why it changes the taste",
+      "excerpt": "Processing method can shift coffee from bright and clean to wild and fruity.",
+      "category": "Education",
+      "date": "2025-12-01",
+      "image": "/images/news/washed-natural.jpg",
+      "content": "Full article text here..."
+    },
+    {
+      "id": 2,
+      "title": "How roast level affects acidity and sweetness",
+      "excerpt": "Light roasts keep acidity, darker roasts bring more bitterness and body.",
+      "category": "Roasting",
+      "date": "2025-12-05",
+      "image": "/images/news/roast-level.jpg",
+      "content": "Full article text here..."
+    },
+    {
+      "id": 3,
+      "title": "Chemex vs V60: what to choose",
+      "excerpt": "Chemex is cleaner, V60 is brighter and more expressive.",
+      "category": "Brewing",
+      "date": "2025-12-10",
+      "image": "/images/news/chemex-v60.jpg",
+      "content": "Full article text here..."
+    }
+  ]
+}
