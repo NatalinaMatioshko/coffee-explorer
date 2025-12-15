@@ -33,7 +33,7 @@ const CoffeeFacts: React.FC = () => {
   return (
     <section className="bg-[#4f2d20] py-20 px-4">
       <div className="max-w-360 mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#ceafa3] text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#D4C5B9] text-center mb-16">
           Journey Through Coffee
         </h2>
 
@@ -57,25 +57,25 @@ const CoffeeFacts: React.FC = () => {
               {/* Контент */}
               <div className=" rounded-2xl  w-full lg:w-1/2 space-y-6">
                 <div>
-                  <p className="text-white font-semibold uppercase tracking-wider text-sm mb-2">
+                  <p className="text-[#f9f3e9] font-semibold uppercase tracking-wider text-sm mb-2">
                     {fact.subtitle}
                   </p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-[#ceafa3] mb-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-[#D4C5B9] mb-4">
                     {fact.title}
                   </h3>
-                  <p className="text-lg text-white leading-relaxed">
+                  <p className="text-lg text-[#f9f3e9] leading-relaxed">
                     {fact.description}
                   </p>
                 </div>
 
                 {/* Статистика */}
-                <div className="grid grid-cols-2 gap-6 pt-6 border-t border-amber-200">
+                <div className="grid grid-cols-2 gap-6 pt-6 border-t border-[#8B5A3C]">
                   {fact.stats.map((stat, idx) => (
                     <div key={idx} className="text-center">
-                      <p className="text-3xl font-bold text-[#ceafa3] mb-1">
+                      <p className="text-3xl font-bold text-[#D4C5B9] mb-1">
                         {stat.value}
                       </p>
-                      <p className="text-sm text-[#ceafa3] uppercase tracking-wide">
+                      <p className="text-sm text-[#D4C5B9] uppercase tracking-wide">
                         {stat.label}
                       </p>
                     </div>

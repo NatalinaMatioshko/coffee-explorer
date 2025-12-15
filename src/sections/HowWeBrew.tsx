@@ -23,7 +23,7 @@ Understanding the method helps you choose the right coffee for your taste.`,
   imageAlt = "Coffee brewing methods",
 }: HowWeBrewProps) {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-[#f9f3e9]">
       <div className="container mx-auto grid items-center gap-12 px-4 md:grid-cols-2">
         {/* Image */}
         <motion.div
@@ -49,21 +49,21 @@ Understanding the method helps you choose the right coffee for your taste.`,
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="max-w-xl"
         >
-          <p className="mb-3 text-sm uppercase tracking-widest text-neutral-500">
+          <p className="mb-3 text-sm uppercase tracking-widest text-[#4f2d20]">
             {title}
           </p>
 
-          <h2 className="mb-6 text-3xl font-light text-neutral-900 md:text-4xl">
+          <h2 className="mb-6 text-3xl font-light text-[#4f2d20] md:text-4xl">
             {subtitle}
           </h2>
 
-          <p className="mb-6 whitespace-pre-line text-neutral-600">
+          <p className="mb-6 whitespace-pre-line text-[#4f2d20]">
             {description}
           </p>
 
           <Link
             to={ctaTo}
-            className="inline-block rounded-full border border-neutral-900 px-6 py-3 text-sm text-neutral-900 transition hover:bg-neutral-900 hover:text-white"
+            className="inline-block rounded-full border border-[#4f2d20] px-6 py-3 text-sm text-[#4f2d20] transition hover:bg-[#4f2d20] hover:text-[#f9f3e9]"
           >
             {ctaLabel}
           </Link>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { CiShoppingBasket } from "react-icons/ci";
 import Logo from "../components/Logo";
@@ -8,11 +9,25 @@ import SearchBar from "../components/SearchBar";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
+  const darkHeaderRoutes = [
+    "/menu",
+    "/beans",
+    "/courses",
+    "/contacts",
+    "/product",
+  ];
+  const isDark = darkHeaderRoutes.some((r) => location.pathname.startsWith(r));
   return (
     <>
-      <header className="absolute w-full flex justify-between items-center py-2 px-4 md:px-8 text-[#f9f3e9] z-50 bg-[#4f2d20] md:bg-transparent">
-        {/* ✅ Контейнер з обмеженою шириною */}
+      <header
+        className={`w-full flex justify-between items-center py-2 px-4 md:px-8 text-[#f9f3e9] z-50 transition-colors duration-300
+          ${isDark ? "bg-[#4f2d20]" : "bg-transparent"}
+          ${isDark ? "sticky top-0" : "absolute"}
+        `}
+      >
+        {/* Контейнер з обмеженою шириною */}
         <div className="max-w-360 mx-auto flex justify-between items-center gap-6 lg:gap-12">
           {/* ЛІВА ЧАСТИНА: Burger + Логотип */}
           <div className="flex items-center gap-4">

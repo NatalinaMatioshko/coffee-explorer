@@ -22,10 +22,10 @@ const HomePage: React.FC = () => {
 
           {/* Main Content */}
           <div className="flex-1 flex flex-col items-center justify-center py-20">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Sonsie_One'] text-[#fff8e8] title-shimmer drop-shadow-lg text-center px-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Sonsie_One'] text-[#F7F5F2] title-shimmer drop-shadow-lg text-center px-4">
               Coffee Explorer
             </h1>
-            <button className="border-2 border-white min-w-60 rounded-xl px-8 py-3 mt-10 uppercase text-sm md:text-base tracking-wide hover:bg-white hover:text-amber-950 hover:tracking-widest transition-all duration-300 cursor-pointer">
+            <button className="border-2 border-[#F7F5F2] min-w-60 rounded-xl px-8 py-3 mt-10 uppercase text-sm md:text-base tracking-wide hover:bg-[#F7F5F2] hover:text-amber-950 hover:tracking-widest transition-all duration-300 cursor-pointer">
               Shop for Coffee
             </button>
           </div>

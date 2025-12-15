@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="max-w-26">
-            <h3 className="font-extrabold ">Work hours</h3>
+            <h3 className="font-extrabold">Work hours</h3>
             <p>Monday-Friday from 9 a.m. to 6 p.m.</p>
           </div>
 

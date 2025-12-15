@@ -50,13 +50,13 @@ export default function CoffeeNewsSection() {
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="animate-pulse overflow-hidden rounded-2xl border bg-white"
+                className="animate-pulse overflow-hidden rounded-2xl border bg-[#f9f3e9]"
               >
-                <div className="h-40 w-full bg-neutral-200" />
+                <div className="h-40 w-full bg-[#f9f3e9]" />
                 <div className="p-5">
-                  <div className="mb-3 h-4 w-24 rounded bg-neutral-200" />
-                  <div className="mb-2 h-6 w-full rounded bg-neutral-200" />
-                  <div className="h-6 w-5/6 rounded bg-neutral-200" />
+                  <div className="mb-3 h-4 w-24 rounded bg-[#f9f3e9]" />
+                  <div className="mb-2 h-6 w-full rounded bg-[#f9f3e9]" />
+                  <div className="h-6 w-5/6 rounded bg-[#f9f3e9]" />
                 </div>
               </div>
             ))}
@@ -66,9 +66,9 @@ export default function CoffeeNewsSection() {
             {news.map((n) => (
               <article
                 key={n.id}
-                className="group overflow-hidden rounded-2xl border bg-white transition hover:-translate-y-1 hover:shadow-lg"
+                className="group overflow-hidden rounded-2xl border bg-[#f9f3e9] transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="relative h-40 w-full overflow-hidden bg-neutral-100">
+                <div className="relative h-40 w-full overflow-hidden bg-[#f9f3e9]">
                   {n.imageUrl ? (
                     <img
                       src={n.imageUrl}
@@ -84,17 +84,17 @@ export default function CoffeeNewsSection() {
                   ) : null}
 
                   {/* бейдж джерела */}
-                  <div className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-xs text-neutral-700 backdrop-blur">
+                  <div className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-xs text-[#4f2d20] backdrop-blur">
                     {n.source}
                   </div>
                 </div>
 
                 <div className="p-5">
-                  <div className="mb-2 text-xs text-neutral-500">
+                  <div className="mb-2 text-xs text-[#6B4423]">
                     {n.date ? new Date(n.date).toLocaleDateString() : ""}
                   </div>
 
-                  <h3 className="mb-3 line-clamp-2 text-lg font-medium text-neutral-900">
+                  <h3 className="mb-3 line-clamp-2 text-lg font-medium text-[#4f2d20]">
                     {n.title}
                   </h3>
 
@@ -102,7 +102,7 @@ export default function CoffeeNewsSection() {
                     href={n.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm text-neutral-900 underline underline-offset-4 hover:no-underline"
+                    className="text-sm text-[#4f2d20] underline underline-offset-4 hover:no-underline"
                   >
                     Read on site
                   </a>
