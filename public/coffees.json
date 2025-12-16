@@ -1,0 +1,182 @@
+[
+  {
+    "id": 19,
+    "name": "Kenya AA",
+    "country": "Kenya",
+    "roast_level": "Medium",
+    "process_method": "Washed",
+    "quantity": 250,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Kenya.svg.webp"
+  },
+  {
+    "id": 20,
+    "name": "Ethiopia Yirgacheffe",
+    "country": "Ethiopia",
+    "roast_level": "Light",
+    "process_method": "Natural",
+    "quantity": 200,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Ethiopia.svg.png"
+  },
+  {
+    "id": 21,
+    "name": "Colombia Supremo",
+    "country": "Colombia",
+    "roast_level": "Medium-dark",
+    "process_method": "Washed",
+    "quantity": 220,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Colombia.svg.png"
+  },
+  {
+    "id": 22,
+    "name": "Brazil Santos",
+    "country": "Brazil",
+    "roast_level": "Medium",
+    "process_method": "Natural",
+    "quantity": 300,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Brazil.svg.png"
+  },
+  {
+    "id": 23,
+    "name": "Guatemala Antigua",
+    "country": "Guatemala",
+    "roast_level": "Medium",
+    "process_method": "Washed",
+    "quantity": 250,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Guatemala.svg.png"
+  },
+  {
+    "id": 24,
+    "name": "Sumatra Mandheling",
+    "country": "Indonesia",
+    "roast_level": "Dark",
+    "process_method": "Wet-hulled",
+    "quantity": 150,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Indonesia.svg.png"
+  },
+  {
+    "id": 25,
+    "name": "Costa Rica Tarrazu",
+    "country": "Costa Rica",
+    "roast_level": "Medium",
+    "process_method": "Honey",
+    "quantity": 200,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Costa_Rica_state.svg.png"
+  },
+  {
+    "id": 26,
+    "name": "Panama Geisha",
+    "country": "Panama",
+    "roast_level": "Light",
+    "process_method": "Washed",
+    "quantity": 100,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Panama.svg.png"
+  },
+  {
+    "id": 27,
+    "name": "Honduras SHG",
+    "country": "Honduras",
+    "roast_level": "Medium",
+    "process_method": "Washed",
+    "quantity": 250,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Honduras_2022present.svg.png"
+  },
+  {
+    "id": 28,
+    "name": "Rwanda Bourbon",
+    "country": "Rwanda",
+    "roast_level": "Light",
+    "process_method": "Washed",
+    "quantity": 180,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Rwanda.svg.webp"
+  },
+  {
+    "id": 29,
+    "name": "India Monsooned Malabar",
+    "country": "India",
+    "roast_level": "Medium-dark",
+    "process_method": "Monsooned",
+    "quantity": 200,
+    "owner_id": 1,
+    "image": "coffees/india-clipart-lg.png"
+  },
+  {
+    "id": 30,
+    "name": "Peru Cajamarca",
+    "country": "Peru",
+    "roast_level": "Medium",
+    "process_method": "Washed",
+    "quantity": 220,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Peru.svg.png"
+  },
+  {
+    "id": 31,
+    "name": "El Salvador Pacamara",
+    "country": "El Salvador",
+    "roast_level": "Medium",
+    "process_method": "Anaerobic",
+    "quantity": 250,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_El_Salvador.svg.png"
+  },
+  {
+    "id": 32,
+    "name": "Yemen Mocha",
+    "country": "Yemen",
+    "roast_level": "Medium",
+    "process_method": "Natural",
+    "quantity": 170,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Yemen.svg.png"
+  },
+  {
+    "id": 33,
+    "name": "Nicaragua SHG",
+    "country": "Nicaragua",
+    "roast_level": "Medium",
+    "process_method": "Carbonic maceration",
+    "quantity": 200,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Nicaragua.svg.png"
+  },
+  {
+    "id": 34,
+    "name": "Burundi Kayanza",
+    "country": "Burundi",
+    "roast_level": "Light",
+    "process_method": "Washed",
+    "quantity": 180,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Burundi.svg.png"
+  },
+  {
+    "id": 35,
+    "name": "Tanzania Peaberry",
+    "country": "Tanzania",
+    "roast_level": "Medium",
+    "process_method": "Anaerobic natural",
+    "quantity": 200,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Tanzania.svg.png"
+  },
+  {
+    "id": 36,
+    "name": "Papua New Guinea Sigri",
+    "country": "Papua New Guinea",
+    "roast_level": "Medium-dark",
+    "process_method": "Washed",
+    "quantity": 150,
+    "owner_id": 1,
+    "image": "coffees/Flag_of_Papua_New_Guinea.svg.png"
+  }
+]

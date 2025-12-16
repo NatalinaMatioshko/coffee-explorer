@@ -6,6 +6,7 @@ import Marquee from "../components/Marquee";
 import CoffeeNewsSection from "../sections/CoffeeNewsSection";
 import CoffeeFacts from "../sections/CoffeeFacts";
 import HowWeBrew from "../sections/HowWeBrew";
+import Spain from "../layers/Spain";
 
 const HomePage: React.FC = () => {
   return (
@@ -33,12 +34,13 @@ const HomePage: React.FC = () => {
 
         <Marquee />
       </div>
-
       {/* Sections */}
       <HowWeBrew imageSrc={howWeBrewImg} />
       <CoffeeFacts />
       <CoffeeNewsSection />
+
       <CoffeeMarquee />
+      <Spain />
     </>
   );
 };
