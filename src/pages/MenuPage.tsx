@@ -18,7 +18,8 @@ type RecipeFromDb = {
   method: string;
   description: string;
   ingredients: string[];
-  image?: string; // приклад: "recipes/1.webp" [file:11]
+  image?: string;
+  category: "hot" | "iced";
 };
 
 function getCategory(recipe: RecipeFromDb): DrinkCategory {
@@ -89,7 +90,7 @@ export default function MenuPage() {
   }, [drinks, category, query]);
 
   return (
-    <div className="min-h-screen bg-[#fefbf3] pt-30">
+    <div className="min-h-screen bg-[#fefbf3] pt-20">
       <div className="mx-auto max-w-360 px-4 py-20">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
