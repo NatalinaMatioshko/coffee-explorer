@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 @layer utilities {
   .title-shimmer {
