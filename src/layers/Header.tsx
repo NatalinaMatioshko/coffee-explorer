@@ -22,10 +22,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`w-full flex justify-between items-center py-2 px-4 md:px-8 text-[#f9f3e9] z-50 transition-colors duration-300
-          ${isDark ? "bg-[#4f2d20]" : "bg-transparent"}
-          ${isDark ? "sticky top-0" : "absolute"}
-        `}
+        className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center py-2 px-4 md:px-8 text-[#f9f3e9]
+    transition-colors duration-300
+    ${isDark ? "bg-[#4f2d20]" : "bg-transparent"}
+  `}
       >
         {/* Контейнер з обмеженою шириною */}
         <div className="max-w-360 mx-auto flex justify-between items-center gap-6 lg:gap-12">

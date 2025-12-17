@@ -1,13 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
+type DrinkCategory = "hot" | "iced";
+
 type Drink = {
-  id: string;
+  id: number;
   title: string;
   desc: string;
   ingredients: string[];
   image?: string;
-  category: "hot" | "iced";
+  category: DrinkCategory;
 };
 
 type RecipeFromDb = {
@@ -16,21 +18,20 @@ type RecipeFromDb = {
   method: string;
   description: string;
   ingredients: string[];
-  image?: string;
+  image?: string; // приклад: "recipes/1.webp" [file:11]
 };
 
-function getCategory(recipe: RecipeFromDb): "hot" | "iced" {
+function getCategory(recipe: RecipeFromDb): DrinkCategory {
   const text = `${recipe.title} ${recipe.method}`.toLowerCase();
-
   return text.includes("iced") || text.includes("cold") ? "iced" : "hot";
 }
 
-const MenuPage: React.FC = () => {
+export default function MenuPage() {
   const [drinks, setDrinks] = useState<Drink[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const [category, setCategory] = useState<"all" | "hot" | "iced">("all");
+  const [category, setCategory] = useState<"all" | DrinkCategory>("all");
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -41,19 +42,19 @@ const MenuPage: React.FC = () => {
         setLoading(true);
         setError(null);
 
+        // якщо recipes.json у public, то BASE_URL + "recipes.json" працює і в dev, і на Pages [file:1]
         const res = await fetch(`${import.meta.env.BASE_URL}recipes.json`);
         if (!res.ok) throw new Error(`Failed to load recipes (${res.status})`);
 
         const data: RecipeFromDb[] = await res.json();
 
         const mapped: Drink[] = data.map((r) => ({
-          id: String(r.id),
+          id: r.id,
           title: r.title,
           desc: r.description?.trim() || "No description yet.",
           ingredients: Array.isArray(r.ingredients) ? r.ingredients : [],
-          image: r.image
-            ? `${import.meta.env.BASE_URL}media/${r.image}`
-            : undefined,
+          // ВАЖЛИВО: НЕ додаємо "media/". У тебе вже готовий шлях типу "recipes/1.webp" [file:11]
+          image: r.image ? `${import.meta.env.BASE_URL}${r.image}` : undefined,
           category: getCategory(r),
         }));
 
@@ -88,22 +89,22 @@ const MenuPage: React.FC = () => {
   }, [drinks, category, query]);
 
   return (
-    <div className="min-h-screen bg-[#fefbf3]">
-      <div className="max-w-360 mx-auto px-4 py-20">
+    <div className="min-h-screen bg-[#fefbf3] pt-30">
+      <div className="mx-auto max-w-360 px-4 py-20">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs uppercase tracking-widest text-neutral-500">
               Coffee menu
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#4f2d20]">
+            <h1 className="text-4xl font-bold text-[#4f2d20] md:text-5xl">
               Drinks
             </h1>
           </div>
 
           {/* Controls */}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
-            <div className="inline-flex rounded-full border border-amber-200 overflow-hidden bg-white">
+            <div className="inline-flex overflow-hidden rounded-full border border-amber-200 bg-white">
               <button
                 type="button"
                 onClick={() => setCategory("all")}
@@ -143,7 +144,7 @@ const MenuPage: React.FC = () => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search by name or ingredient..."
-              className="h-10 w-full sm:w-72 rounded-full border border-amber-200 bg-white px-4 text-sm outline-none focus:border-[#4f2d20]"
+              className="h-10 w-full rounded-full border border-amber-200 bg-white px-4 text-sm outline-none focus:border-[#4f2d20] sm:w-72"
             />
           </div>
         </div>
@@ -158,9 +159,8 @@ const MenuPage: React.FC = () => {
             {filtered.map((d) => (
               <article
                 key={d.id}
-                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm hover:shadow-md transition"
+                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm transition hover:shadow-md"
               >
-                {/* Optional image */}
                 {d.image ? (
                   <div className="mb-4 overflow-hidden rounded-xl border border-amber-100 bg-amber-50">
                     <img
@@ -176,7 +176,7 @@ const MenuPage: React.FC = () => {
                   <h2 className="text-xl font-semibold text-[#4f2d20]">
                     {d.title}
                   </h2>
-                  <span className="text-xs rounded-full border border-amber-200 px-3 py-1 text-[#4f2d20]">
+                  <span className="rounded-full border border-amber-200 px-3 py-1 text-xs text-[#4f2d20]">
                     {d.category}
                   </span>
                 </div>
@@ -187,7 +187,7 @@ const MenuPage: React.FC = () => {
                   {d.ingredients.slice(0, 8).map((ing) => (
                     <span
                       key={ing}
-                      className="text-xs rounded-full bg-amber-50 border border-amber-100 px-3 py-1 text-[#4f2d20]"
+                      className="rounded-full border border-amber-100 bg-amber-50 px-3 py-1 text-xs text-[#4f2d20]"
                     >
                       {ing}
                     </span>
@@ -196,7 +196,7 @@ const MenuPage: React.FC = () => {
 
                 <Link
                   to={`/menu/${d.id}`}
-                  className="mt-6 inline-flex w-full items-center justify-center h-10 rounded-xl bg-[#4f2d20] text-[#fefbf3] text-sm hover:opacity-90 transition"
+                  className="mt-6 inline-flex h-10 w-full items-center justify-center rounded-xl bg-[#4f2d20] text-sm text-[#fefbf3] transition hover:opacity-90"
                 >
                   View details
                 </Link>
@@ -214,6 +214,4 @@ const MenuPage: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default MenuPage;
+}

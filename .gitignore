@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+beans.json
+
+news.json
+
+recipes.json

@@ -11,7 +11,7 @@ const CoursesPage = () => {
     <div className="min-h-screen bg-[#fefbf3]">
       {/* Hero */}
       <section
-        className="relative py-28 min-h-screen bg-[#4f2d20] text-[#f9f3e9] bg-fixed "
+        className="flex justify-center flex-col  relative py-28 min-h-screen bg-[#4f2d20] text-[#f9f3e9] bg-fixed "
         style={{
           backgroundImage: `url(${bgCourses})`,
           backgroundSize: "cover",
@@ -21,7 +21,7 @@ const CoursesPage = () => {
         {/* затемнення */}
         <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/70 pointer-events-none"></div>
 
-        <div className="relative max-w-360 mx-auto px-4 text-center ">
+        <div className="  relative max-w-360 mx-auto px-4 text-center ">
           <p className="text-sm uppercase tracking-widest opacity-80">
             Coffee education
           </p>
