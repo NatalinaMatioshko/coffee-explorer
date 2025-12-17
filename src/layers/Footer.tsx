@@ -3,6 +3,7 @@ import Menu from "../components/Menu";
 import { FaInstagram } from "react-icons/fa";
 import tiktok from "../assets/svg/tiktok .svg";
 import { BsTwitterX } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -23,14 +24,13 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex gap-5">
-            <a
-              href="https://www.instagram.com"
+            <Link
+              to="/gallery"
               aria-label="Instagram"
               className="hover:opacity-80 transition-opacity"
-              target="_blank"
             >
               <FaInstagram className="w-8 h-8" />
-            </a>
+            </Link>
             <a
               href="https://www.x.com"
               aria-label="X"

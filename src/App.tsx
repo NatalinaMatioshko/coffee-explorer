@@ -41,10 +41,14 @@ import BeansPage from "./pages/BeansPage";
 import CoursesPage from "./pages/CoursesPage";
 import ContactsPage from "./pages/ContactsPage";
 import ProductPage from "./pages/ProductPage";
+import FeedPage from "./pages/FeedPage";
+import GalleryPage from "./pages/GalleryPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <BrowserRouter basename="coffee-explorer">
+      <ScrollToTop />
       <Header />
       <main>
         <Routes>
@@ -58,6 +62,8 @@ export default function App() {
 
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/feed" element={<FeedPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
         </Routes>
       </main>
       <Footer />

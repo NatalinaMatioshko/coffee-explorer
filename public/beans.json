@@ -7,7 +7,7 @@
     "process_method": "Washed",
     "quantity": 250,
     "owner_id": 1,
-    "image": "1.webp"
+    "image": "coffees/1.webp"
   },
   {
     "id": 20,
@@ -17,7 +17,7 @@
     "process_method": "Natural",
     "quantity": 200,
     "owner_id": 1,
-    "image": "2.webp"
+    "image": "coffees/2.webp"
   },
   {
     "id": 21,
@@ -27,7 +27,7 @@
     "process_method": "Washed",
     "quantity": 220,
     "owner_id": 1,
-    "image": "3.webp"
+    "image": "coffees/3.webp"
   },
   {
     "id": 22,
@@ -37,7 +37,7 @@
     "process_method": "Natural",
     "quantity": 300,
     "owner_id": 1,
-    "image": "4.webp"
+    "image": "coffees/4.webp"
   },
   {
     "id": 23,
@@ -47,7 +47,7 @@
     "process_method": "Washed",
     "quantity": 250,
     "owner_id": 1,
-    "image": "5.webp"
+    "image": "coffees/5.webp"
   },
   {
     "id": 24,
@@ -57,7 +57,7 @@
     "process_method": "Wet-hulled",
     "quantity": 150,
     "owner_id": 1,
-    "image": "6.webp"
+    "image": "coffees/6.webp"
   },
   {
     "id": 25,
@@ -67,7 +67,7 @@
     "process_method": "Honey",
     "quantity": 200,
     "owner_id": 1,
-    "image": "7.webp"
+    "image": "coffees/7.webp"
   },
   {
     "id": 26,
@@ -77,7 +77,7 @@
     "process_method": "Washed",
     "quantity": 100,
     "owner_id": 1,
-    "image": "8.webp"
+    "image": "coffees/8.webp"
   },
   {
     "id": 27,
@@ -87,7 +87,7 @@
     "process_method": "Washed",
     "quantity": 250,
     "owner_id": 1,
-    "image": "9.webp"
+    "image": "coffees/9.webp"
   },
   {
     "id": 28,
@@ -97,7 +97,7 @@
     "process_method": "Washed",
     "quantity": 180,
     "owner_id": 1,
-    "image": "10.webp"
+    "image": "coffees/10.webp"
   },
   {
     "id": 29,
@@ -107,7 +107,7 @@
     "process_method": "Monsooned",
     "quantity": 200,
     "owner_id": 1,
-    "image": "11.webp"
+    "image": "coffees/11.webp"
   },
   {
     "id": 30,
@@ -117,7 +117,7 @@
     "process_method": "Washed",
     "quantity": 220,
     "owner_id": 1,
-    "image": "12.webp"
+    "image": "coffees/12.webp"
   },
   {
     "id": 31,
@@ -127,7 +127,7 @@
     "process_method": "Anaerobic",
     "quantity": 250,
     "owner_id": 1,
-    "image": "13.webp"
+    "image": "coffees/13.webp"
   },
   {
     "id": 32,
@@ -137,7 +137,7 @@
     "process_method": "Natural",
     "quantity": 170,
     "owner_id": 1,
-    "image": "14.webp"
+    "image": "coffees/14.webp"
   },
   {
     "id": 33,
@@ -147,7 +147,7 @@
     "process_method": "Carbonic maceration",
     "quantity": 200,
     "owner_id": 1,
-    "image": "15.webp"
+    "image": "coffees/15.webp"
   },
   {
     "id": 34,
@@ -157,7 +157,7 @@
     "process_method": "Washed",
     "quantity": 180,
     "owner_id": 1,
-    "image": "16.webp"
+    "image": "coffees/16.webp"
   },
   {
     "id": 35,
@@ -167,7 +167,7 @@
     "process_method": "Anaerobic natural",
     "quantity": 200,
     "owner_id": 1,
-    "image": "17.webp"
+    "image": "coffees/17.webp"
   },
   {
     "id": 36,
@@ -177,6 +177,6 @@
     "process_method": "Washed",
     "quantity": 150,
     "owner_id": 1,
-    "image": "18.webp"
+    "image": "coffees/18.webp"
   }
 ]

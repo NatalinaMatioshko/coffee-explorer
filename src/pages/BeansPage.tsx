@@ -115,7 +115,7 @@ export default function BeansPage() {
             >
               {b.image ? (
                 <img
-                  src={`/coffee-explorer/${b.image}`}
+                  src={`${import.meta.env.BASE_URL}${b.image}`}
                   alt={b.name}
                   className="mb-4 h-40 w-full object-contain"
                   loading="lazy"
