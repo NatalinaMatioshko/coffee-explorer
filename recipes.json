@@ -1,0 +1,491 @@
+[
+  {
+    "id": 14,
+    "title": "Classic espresso",
+    "method": "Espresso",
+    "description": "Juicy, wine-like, with bright acidity and deep sweetness.",
+    "ingredients": ["Kenya AA - 18 g", "Water - 40 ml"],
+    "instructions": [
+      "1. Medium grind, for espresso.",
+      "2. Tamp into the portafilter.",
+      "3. Extract for 25-30 sec at 93°C.",
+      "4. Serve immediately, with no additives."
+    ],
+    "coffee_id": 19,
+    "owner_id": 1,
+    "image": "recipes/1.webp",
+    "coffee": {
+      "id": 19,
+      "name": "Kenya AA",
+      "country": "Kenya",
+      "roast_level": "Medium",
+      "process_method": "Washed",
+      "quantity": 250,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Kenya.svg.webp"
+    }
+  },
+  {
+    "id": 15,
+    "title": "V60",
+    "method": "V60",
+    "description": "Ethereal and floral, with notes of jasmine and citrus.",
+    "ingredients": ["Ethiopia Yirgacheffe - 15 g", "Water - 250 ml"],
+    "instructions": [
+      "1. Hand grind for V60 (medium).",
+      "2. Heat the water to 92°C.",
+      "3. Do a pre-infusion (30 g water, 30 sec).",
+      "4. Slowly pour the remaining water in circular motions until 2:30."
+    ],
+    "coffee_id": 20,
+    "owner_id": 1,
+    "image": "recipes/2.webp",
+    "coffee": {
+      "id": 20,
+      "name": "Ethiopia Yirgacheffe",
+      "country": "Ethiopia",
+      "roast_level": "Light",
+      "process_method": "Natural",
+      "quantity": 200,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Ethiopia.svg.webp"
+    }
+  },
+  {
+    "id": 16,
+    "title": "V60",
+    "method": "V60",
+    "description": "Clean cup, light berry acidity, and a delicate chocolate aftertaste.",
+    "ingredients": ["Colombia Supremo - 16 g", "Water - 250 ml"],
+    "instructions": [
+      "1. Use a grind for V60 (medium).",
+      "2. Place the filter and preheat it and the brewer/server.",
+      "3. Add the coffee, pour 30 ml water (prewet), wait 30 sec.",
+      "4. Slowly pour 220 ml water in circular motions over 2 min.",
+      "5. Pour into a cup."
+    ],
+    "coffee_id": 21,
+    "owner_id": 1,
+    "image": "recipes/3.webp",
+    "coffee": {
+      "id": 21,
+      "name": "Colombia Supremo",
+      "country": "Colombia",
+      "roast_level": "Medium-dark",
+      "process_method": "Washed",
+      "quantity": 220,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Colombia.svg.webp"
+    }
+  },
+  {
+    "id": 17,
+    "title": "\"Latino\" filter coffee",
+    "method": "Filter",
+    "description": "Nutty and sweet, with a smooth, soft texture.",
+    "ingredients": ["Brazil Santos - 16 g", "Water - 250 ml"],
+    "instructions": [
+      "1. Medium grind.",
+      "2. Filter bag; hand pour 230-240 ml water (92-93°C).",
+      "3. Brew for 2.5 min, serve in a preheated cup."
+    ],
+    "coffee_id": 22,
+    "owner_id": 1,
+    "image": "recipes/4.webp",
+    "coffee": {
+      "id": 22,
+      "name": "Brazil Santos",
+      "country": "Brazil",
+      "roast_level": "Medium",
+      "process_method": "Natural",
+      "quantity": 300,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Brazil.svg.webp"
+    }
+  },
+  {
+    "id": 18,
+    "title": "AeroPress",
+    "method": "AeroPress",
+    "description": "Bright body with chocolate tones.",
+    "ingredients": ["Guatemala Antigua - 17 g", "Water - 230 ml"],
+    "instructions": [
+      "1. Medium-fine grind.",
+      "2. Add the coffee, pour 100 ml water, stir.",
+      "3. Add the rest, stir again.",
+      "4. Press after 1:20."
+    ],
+    "coffee_id": 23,
+    "owner_id": 1,
+    "image": "recipes/5.webp",
+    "coffee": {
+      "id": 23,
+      "name": "Guatemala Antigua",
+      "country": "Guatemala",
+      "roast_level": "Medium",
+      "process_method": "Washed",
+      "quantity": 250,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Guatemala.svg.webp"
+    }
+  },
+  {
+    "id": 19,
+    "title": "\"Tropic\" Chemex",
+    "method": "Chemex",
+    "description": "Fruity and vibrant, with a light aftertaste.",
+    "ingredients": ["Costa Rica Tarrazu - 25 g", "Water - 400 ml"],
+    "instructions": [
+      "1. Coarse grind.",
+      "2. Preheat the Chemex and filter.",
+      "3. Bloom the coffee (50 g water, 35 sec).",
+      "4. Slowly pour the water; finish by 4 minutes."
+    ],
+    "coffee_id": 25,
+    "owner_id": 1,
+    "image": "recipes/6.webp",
+    "coffee": {
+      "id": 25,
+      "name": "Costa Rica Tarrazu",
+      "country": "Costa Rica",
+      "roast_level": "Medium",
+      "process_method": "Honey",
+      "quantity": 200,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Costa_Rica_state.svg.webp"
+    }
+  },
+  {
+    "id": 20,
+    "title": "\"Spice Island\" Raf",
+    "method": "Raf",
+    "description": "Spicy and dense, with an earthy profile.",
+    "ingredients": [
+      "Sumatra Mandheling - 16 g",
+      "Water - 180 ml",
+      "Cream - 40 ml",
+      "Sugar - 1 tsp"
+    ],
+    "instructions": [
+      "1. Pull a double espresso (16 g, 40 ml).",
+      "2. Mix with cream and sugar, steam-whisk until smooth."
+    ],
+    "coffee_id": 24,
+    "owner_id": 1,
+    "image": "recipes/7.webp",
+    "coffee": {
+      "id": 24,
+      "name": "Sumatra Mandheling",
+      "country": "Indonesia",
+      "roast_level": "Dark",
+      "process_method": "Wet-hulled",
+      "quantity": 150,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Indonesia.svg.webp"
+    }
+  },
+  {
+    "id": 21,
+    "title": "French press",
+    "method": "French press",
+    "description": "Berry acidity with a full body.",
+    "ingredients": ["Rwanda Bourbon - 16 g", "Water - 250 ml"],
+    "instructions": [
+      "1. Use a coarse grind for French press.",
+      "2. Add the coffee and pour in all the water (94°C).",
+      "3. Steep for 4 min, press down slowly."
+    ],
+    "coffee_id": 28,
+    "owner_id": 1,
+    "image": "recipes/8.webp",
+    "coffee": {
+      "id": 28,
+      "name": "Rwanda Bourbon",
+      "country": "Rwanda",
+      "roast_level": "Light",
+      "process_method": "Washed",
+      "quantity": 180,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Rwanda.svg.webp"
+    }
+  },
+  {
+    "id": 22,
+    "title": "Cezve",
+    "method": "Cezve",
+    "description": "Dense and earthy, with a nutty aftertaste.",
+    "ingredients": [
+      "India Monsooned Malabar - 12 g",
+      "Water - 90 ml",
+      "Sugar - to taste"
+    ],
+    "instructions": [
+      "1. Add coffee and sugar to the cezve and pour in cold water.",
+      "2. Heat until foam rises (do not boil).",
+      "3. Remove from heat and let it settle briefly."
+    ],
+    "coffee_id": 29,
+    "owner_id": 1,
+    "image": "recipes/9.webp",
+    "coffee": {
+      "id": 29,
+      "name": "India Monsooned Malabar",
+      "country": "India",
+      "roast_level": "Medium-dark",
+      "process_method": "Monsooned",
+      "quantity": 200,
+      "owner_id": 1,
+      "image": "coffees/india-clipart-lg.webp"
+    }
+  },
+  {
+    "id": 23,
+    "title": "V60 Geisha",
+    "method": "V60",
+    "description": "Honey-floral, very vibrant and clean.",
+    "ingredients": ["Panama Geisha - 13 g", "Water - 210 ml"],
+    "instructions": [
+      "1. Medium grind.",
+      "2. Bloom — 30 g water, 30 sec.",
+      "3. Pour the rest of the water over 2 minutes."
+    ],
+    "coffee_id": 26,
+    "owner_id": 1,
+    "image": "recipes/10.webp",
+    "coffee": {
+      "id": 26,
+      "name": "Panama Geisha",
+      "country": "Panama",
+      "roast_level": "Light",
+      "process_method": "Washed",
+      "quantity": 100,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Panama.svg.webp"
+    }
+  },
+  {
+    "id": 24,
+    "title": "Chemex",
+    "method": "Chemex",
+    "description": "Soft honey sweetness, smooth body, tropical aftertaste.",
+    "ingredients": ["Nicaragua SHG - 22 g", "Water - 350 ml"],
+    "instructions": [
+      "1. Use a coarse grind for Chemex.",
+      "2. Preheat the Chemex and filter.",
+      "3. Add the coffee, bloom (40 ml water, 30 sec).",
+      "4. Add the remaining water in pulses over 4 min.",
+      "5. Pour into a cup."
+    ],
+    "coffee_id": 33,
+    "owner_id": 1,
+    "image": "recipes/11.webp",
+    "coffee": {
+      "id": 33,
+      "name": "Nicaragua SHG",
+      "country": "Nicaragua",
+      "roast_level": "Medium",
+      "process_method": "Carbonic maceration",
+      "quantity": 200,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Nicaragua.svg.webp"
+    }
+  },
+  {
+    "id": 25,
+    "title": "Siphon",
+    "method": "Siphon",
+    "description": "Sweet and intense, with almond notes.",
+    "ingredients": ["Honduras SHG - 20 g", "Water - 320 ml"],
+    "instructions": [
+      "1. Medium grind.",
+      "2. Brew with a siphon until fully extracted, about 2.5 minutes."
+    ],
+    "coffee_id": 27,
+    "owner_id": 1,
+    "image": "recipes/12.webp",
+    "coffee": {
+      "id": 27,
+      "name": "Honduras SHG",
+      "country": "Honduras",
+      "roast_level": "Medium",
+      "process_method": "Washed",
+      "quantity": 250,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Honduras_2022present.svg.webp"
+    }
+  },
+  {
+    "id": 26,
+    "title": "Espresso",
+    "method": "Espresso",
+    "description": "Spicy, cocoa-like, and full-bodied.",
+    "ingredients": ["Yemen Mocha - 17 g", "Water - 40 ml"],
+    "instructions": [
+      "1. Espresso grind.",
+      "2. Extract for 30 seconds.",
+      "3. Serve immediately."
+    ],
+    "coffee_id": 32,
+    "owner_id": 1,
+    "image": "recipes/13.webp",
+    "coffee": {
+      "id": 32,
+      "name": "Yemen Mocha",
+      "country": "Yemen",
+      "roast_level": "Medium",
+      "process_method": "Natural",
+      "quantity": 170,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Yemen.svg.webp"
+    }
+  },
+  {
+    "id": 27,
+    "title": "Cappuccino",
+    "method": "Cappuccino",
+    "description": "Nutty-fruity, a balanced profile.",
+    "ingredients": [
+      "El Salvador Pacamara  16 g",
+      "Water - 40 ml",
+      "Milk - 120 ml"
+    ],
+    "instructions": [
+      "1. Pull an espresso.",
+      "2. Pour in steamed milk and finish with foam on top."
+    ],
+    "coffee_id": 31,
+    "owner_id": 1,
+    "image": "recipes/14.webp",
+    "coffee": {
+      "id": 31,
+      "name": "El Salvador Pacamara",
+      "country": "El Salvador",
+      "roast_level": "Medium",
+      "process_method": "Anaerobic",
+      "quantity": 250,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_El_Salvador.svg.webp"
+    }
+  },
+  {
+    "id": 28,
+    "title": "AeroPress",
+    "method": "AeroPress",
+    "description": "Juicy and rich, with light fruity notes.",
+    "ingredients": ["Tanzania Peaberry - 15 g", "Water - 220 ml"],
+    "instructions": [
+      "1. Add the coffee and pour 100 ml, stir.",
+      "2. Add the rest, stir again.",
+      "3. Press after 1:30."
+    ],
+    "coffee_id": 35,
+    "owner_id": 1,
+    "image": "recipes/15.webp",
+    "coffee": {
+      "id": 35,
+      "name": "Tanzania Peaberry",
+      "country": "Tanzania",
+      "roast_level": "Medium",
+      "process_method": "Anaerobic natural",
+      "quantity": 200,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Tanzania.svg.webp"
+    }
+  },
+  {
+    "id": 29,
+    "title": "Cold Brew",
+    "method": "Cold Brew",
+    "description": "Smooth and sweet, with low acidity and a chocolatey finish.",
+    "ingredients": [
+      "Burundi Kayanza - 50 g",
+      "Water - 400 ml",
+      "Ice - to serve"
+    ],
+    "instructions": [
+      "1. Coarse grind the coffee.",
+      "2. Combine coffee and water (about a 1:8 ratio).",
+      "3. Steep for 12-16 hours in the fridge (or 10-12 hours at room temperature).",
+      "4. Strain through a paper filter or fine mesh.",
+      "5. Serve over ice; dilute with water or milk to taste if needed."
+    ],
+    "coffee_id": 34,
+    "owner_id": 1,
+    "image": "recipes/16.webp",
+    "coffee": {
+      "id": 34,
+      "name": "Burundi Kayanza",
+      "country": "Burundi",
+      "roast_level": "Light",
+      "process_method": "Washed",
+      "quantity": 180,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Burundi.svg.webp"
+    }
+  },
+  {
+    "id": 30,
+    "title": "Iced Latte",
+    "method": "Iced Latte",
+    "description": "Creamy and refreshing, with balanced espresso sweetness.",
+    "ingredients": [
+      "Papua New Guinea Sigri - 18 g",
+      "Water - 40 ml",
+      "Milk - 240 ml",
+      "Ice - 150 g",
+      "Sugar syrup - optional"
+    ],
+    "instructions": [
+      "1. Pull a double espresso (about 40 ml).",
+      "2. Fill a glass with ice.",
+      "3. Pour espresso over the ice.",
+      "4. Add milk and (optionally) sweetener; stir."
+    ],
+    "coffee_id": 36,
+    "owner_id": 1,
+    "image": "recipes/17.webp",
+    "coffee": {
+      "id": 36,
+      "name": "Papua New Guinea Sigri",
+      "country": "Papua New Guinea",
+      "roast_level": "Medium-dark",
+      "process_method": "Washed",
+      "quantity": 150,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Papua_New_Guinea.svg.webp"
+    }
+  },
+  {
+    "id": 31,
+    "title": "Espresso Tonic",
+    "method": "Espresso Tonic",
+    "category": "iced",
+    "description": "Bright and sparkling, with citrusy bitterness and a crisp finish.",
+    "ingredients": [
+      "Peru Cajamarca - 18 g",
+      "Water - 40 ml",
+      "Tonic water - 120 ml",
+      "Ice - 150 g",
+      "Lime - optional"
+    ],
+    "instructions": [
+      "1. Fill a glass with ice and add tonic water first.",
+      "2. Pull a double espresso (about 40 ml).",
+      "3. Slowly pour espresso over the tonic to keep layers and avoid overflowing foam.",
+      "4. Garnish with lime if desired and serve immediately."
+    ],
+    "coffee_id": 30,
+    "owner_id": 1,
+    "image": "recipes/18.webp",
+    "coffee": {
+      "id": 30,
+      "name": "Peru Cajamarca",
+      "country": "Peru",
+      "roast_level": "Medium",
+      "process_method": "Washed",
+      "quantity": 220,
+      "owner_id": 1,
+      "image": "coffees/Flag_of_Peru.svg.webp"
+    }
+  }
+]
