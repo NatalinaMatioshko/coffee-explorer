@@ -1,6 +1,9 @@
 import { useState, type FormEvent } from "react";
+import { GoogleMap } from "../components/GoogleMap";
 
 export default function ContactsPage() {
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -169,10 +172,14 @@ export default function ContactsPage() {
             </div>
 
             {/* Map placeholder */}
-            <div className="overflow-hidden rounded-2xl border border-amber-100 bg-amber-50 shadow-sm">
+            <div
+              id="map"
+              className="overflow-hidden rounded-2xl border border-amber-100 bg-amber-50 shadow-sm"
+            >
               <div className="flex h-64 items-center justify-center text-neutral-500">
                 {/* Можна додати Google Maps iframe або Leaflet */}
-                <p className="text-sm">🗺️ Map coming soon</p>
+                {/* <p className="text-sm">🗺️ Map coming soon</p> */}
+                <GoogleMap apiKey={apiKey} />
               </div>
             </div>
           </div>

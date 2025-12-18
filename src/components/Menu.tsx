@@ -1,6 +1,5 @@
-// src/components/Menu.tsx
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface MenuProps {
   isMobile?: boolean;
@@ -27,13 +26,13 @@ const Menu: React.FC<MenuProps> = ({
         <ul className="flex flex-col gap-2 text-base tracking-widest font-light uppercase">
           {menuItems.map((item) => (
             <li key={item.name}>
-              <Link
+              <NavLink
                 to={item.path}
                 className="hover:text-orange-200 transition-colors duration-300 relative group inline-block"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-orange-200 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -52,10 +51,10 @@ const Menu: React.FC<MenuProps> = ({
               key={item.name}
               className="cursor-pointer hover:text-[#ecc29c] transition-colors duration-300 relative group"
             >
-              <Link to={item.path}>
+              <NavLink to={item.path}>
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#ecc29c] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -67,7 +66,7 @@ const Menu: React.FC<MenuProps> = ({
   return (
     <nav className="py-4">
       {menuItems.map((item, index) => (
-        <Link
+        <NavLink
           key={item.name}
           to={item.path}
           style={{ animationDelay: `${index * 0.1}s` }}
@@ -90,7 +89,7 @@ const Menu: React.FC<MenuProps> = ({
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </Link>
+        </NavLink>
       ))}
     </nav>
   );

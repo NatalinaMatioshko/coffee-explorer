@@ -140,7 +140,7 @@ export default function ProductPage({ type }: Props) {
   if (!data) return <p className="p-10 text-red-600">Product not found</p>;
 
   return (
-    <div className="min-h-screen bg-[#f9f3e9]">
+    <div className="pt-10 min-h-screen bg-[#f9f3e9]">
       <div className="mx-auto max-w-360 px-4 pt-24 pb-16">
         {/* Breadcrumbs */}
         <div className="mb-6 text-xs text-neutral-500">
