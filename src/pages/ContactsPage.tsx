@@ -1,5 +1,9 @@
 import { useState, type FormEvent } from "react";
 import { GoogleMap } from "../components/GoogleMap";
+import { FaMapPin } from "react-icons/fa6";
+import { IoMailUnreadOutline } from "react-icons/io5";
+import { FaPhone } from "react-icons/fa";
+import { BsAlarm } from "react-icons/bs";
 
 export default function ContactsPage() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string;
@@ -14,38 +18,30 @@ export default function ContactsPage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Тут можна додати відправку на сервер
-    console.log("Form submitted:", formData);
+    // console.log("Form submitted:", formData);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
   };
 
   return (
-    <div className="min-h-screen bg-fefbf3 pt-30">
+    <div className="min-h-screen bg-[#f9f3e9] pt-30 text-[#4f2d20]">
       <div className="mx-auto max-w-7xl px-4 py-20">
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="text-xs uppercase tracking-widest text-neutral-500">
-            Get in touch
-          </p>
-          <h1 className="mt-2 text-4xl font-bold text-4f2d20 md:text-5xl">
-            Contact Us
-          </h1>
-          <p className="mt-4 text-neutral-700">
-            Have questions? We'd love to hear from you.
-          </p>
+          <p className="text-xs uppercase tracking-widest ">Get in touch</p>
+          <h1 className="mt-2 text-4xl font-bold  md:text-5xl">Contact Us</h1>
+          <p className="mt-4 ">Have questions? We'd love to hear from you.</p>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Contact Form */}
           <div className="rounded-2xl border border-amber-100 bg-white p-8 shadow-sm">
-            <h2 className="mb-6 text-2xl font-semibold text-4f2d20">
-              Send us a message
-            </h2>
+            <h2 className="mb-6 text-2xl font-semibold">Send us a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-2 block text-sm font-medium text-4f2d20"
+                  className="mb-2 block text-sm font-medium "
                 >
                   Name
                 </label>
@@ -104,7 +100,7 @@ export default function ContactsPage() {
 
               <button
                 type="submit"
-                className="w-full rounded-xl bg-4f2d20 py-3 font-semibold text-fefbf3 transition hover:opacity-90"
+                className="w-full rounded-xl bg-[#4f2d20] text-[#f9f3e9] border-amber-200  py-3 font-semibold  transition hover:opacity-90"
               >
                 Send Message
               </button>
@@ -121,21 +117,23 @@ export default function ContactsPage() {
           <div className="space-y-6">
             {/* Info Cards */}
             <div className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm">
-              <h3 className="mb-4 text-xl font-semibold text-4f2d20">
-                Visit Us
-              </h3>
-              <div className="space-y-4 text-neutral-700">
+              <h3 className="mb-4 text-xl font-semibold ">Visit Us</h3>
+              <div className="space-y-4 ">
                 <div className="flex gap-3">
-                  <span className="text-xl">📍</span>
+                  <span className="text-xl">
+                    <FaMapPin className="text-pink-600" />
+                  </span>
                   <div>
-                    <p className="font-medium text-4f2d20">Address</p>
+                    <p className="font-medium ">Address</p>
                     <p>Kyiv, Ukraine 01054</p>
                     <p>COFFEE EXPLORER</p>
                   </div>
                 </div>
 
                 <div className="flex gap-3">
-                  <span className="text-xl">📧</span>
+                  <span className="text-xl">
+                    <IoMailUnreadOutline />
+                  </span>
                   <div>
                     <p className="font-medium text-4f2d20">Email</p>
                     <a
@@ -148,7 +146,9 @@ export default function ContactsPage() {
                 </div>
 
                 <div className="flex gap-3">
-                  <span className="text-xl">📞</span>
+                  <span className="text-xl">
+                    <FaPhone className="text-pink-600" />
+                  </span>
                   <div>
                     <p className="font-medium text-4f2d20">Phone</p>
                     <a
@@ -161,7 +161,9 @@ export default function ContactsPage() {
                 </div>
 
                 <div className="flex gap-3">
-                  <span className="text-xl">⏰</span>
+                  <span className="text-xl">
+                    <BsAlarm />
+                  </span>
                   <div>
                     <p className="font-medium text-4f2d20">Working Hours</p>
                     <p>Mon-Fri: 8:00 - 18:00</p>

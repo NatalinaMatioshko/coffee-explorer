@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { setOptions, importLibrary } from "@googlemaps/js-api-loader"; // <-- замість Loader
-// import { BiSolidCoffeeBean } from "react-icons/bi";
+import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
+import coffeeMarkerIcon from "../assets/svg/coffee-bean-marker.svg";
 
 type Props = { apiKey: string };
 
@@ -13,37 +13,41 @@ export function GoogleMap({ apiKey }: Props) {
     const init = async () => {
       if (!mapDivRef.current) return;
 
-      const center: google.maps.LatLngLiteral = { lat: 50.4501, lng: 30.5234 };
+      const center: google.maps.LatLngLiteral = { lat: 50.459, lng: 30.5255 };
 
-      // 1) налаштування лоадера (ключ + версія)
-      setOptions({ key: apiKey, v: "weekly" }); // саме key/v як у доках [web:4]
+      setOptions({ key: apiKey, v: "weekly" });
 
-      // 2) підвантажуємо потрібні бібліотеки
-      await importLibrary("maps");
-      await importLibrary("marker");
+      const { Map } = (await importLibrary("maps")) as google.maps.MapsLibrary;
+      const { Marker } = (await importLibrary(
+        "marker"
+      )) as google.maps.MarkerLibrary;
 
-      // 3) далі можна користуватись google.maps.*
-      map = new google.maps.Map(mapDivRef.current, {
+      map = new Map(mapDivRef.current, {
         center,
         zoom: 12,
         mapTypeId: "roadmap",
+        disableDefaultUI: false,
       });
 
-      const marker = new google.maps.Marker({
+      const marker = new Marker({
         position: center,
         map,
-        title: "Київ",
+        title: "Ми тут!",
         animation: google.maps.Animation.DROP,
         icon: {
-          url: "/assets/svg/coffee-bean-marker.svg",
-          scaledSize: new google.maps.Size(30, 30),
-          anchor: new google.maps.Point(15, 15),
+          url: coffeeMarkerIcon,
+          scaledSize: new google.maps.Size(50, 50),
+          anchor: new google.maps.Point(25, 25),
         },
       });
 
       const infoWindow = new google.maps.InfoWindow({
-        content:
-          '<div style="padding: 10px;"><h3>Київ</h3><p>Столиця України</p></div>',
+        content: `
+          <div style="padding: 8px; color: #4f2d20;">
+            <h3 style="margin: 0 0 5px 0;">Coffee Explorer</h3>
+            <p style="margin: 0;">Найкраща кава у світі!</p>
+          </div>
+        `,
       });
 
       marker.addListener("click", () => {
@@ -58,5 +62,10 @@ export function GoogleMap({ apiKey }: Props) {
     };
   }, [apiKey]);
 
-  return <div ref={mapDivRef} style={{ width: "100%", height: 400 }} />;
+  return (
+    <div
+      ref={mapDivRef}
+      style={{ width: "100%", height: 400, borderRadius: "1rem" }}
+    />
+  );
 }

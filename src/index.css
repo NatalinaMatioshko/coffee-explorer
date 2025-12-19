@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
-/* html {
-  scroll-behavior: smooth;
-} */
+/* @media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 ol,
 ul {
   list-style: none;
-}
+} */
 
 @layer utilities {
   .title-shimmer {

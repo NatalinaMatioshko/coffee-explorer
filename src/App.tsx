@@ -10,14 +10,13 @@ import BeansPage from "./pages/BeansPage";
 import CoursesPage from "./pages/CoursesPage";
 import ContactsPage from "./pages/ContactsPage";
 import ProductPage from "./pages/ProductPage";
-// import FeedPage from "./pages/FeedPage";
 import GalleryPage from "./pages/GalleryPage";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollManager from "./components/ScrollManager";
 
 export default function App() {
   return (
     <BrowserRouter basename="coffee-explorer">
-      <ScrollToTop />
+      {/* <ScrollManager /> */}
       <Header />
       <main>
         <Routes>
