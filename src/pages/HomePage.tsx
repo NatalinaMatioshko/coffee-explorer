@@ -7,6 +7,9 @@ import CoffeeNewsSection from "../sections/CoffeeNewsSection";
 import CoffeeFacts from "../sections/CoffeeFacts";
 import HowWeBrew from "../sections/HowWeBrew";
 import { useNavigate } from "react-router-dom";
+import WhySpecialtyCoffee from "../sections/WhySpecialtyCoffee";
+import OriginMatters from "../sections/OriginMatters";
+import baristaImg from "../assets/img/barista.webp";
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
@@ -39,6 +42,8 @@ const HomePage: React.FC = () => {
       {/* Sections */}
       <HowWeBrew imageSrc={howWeBrewImg} />
       <CoffeeFacts />
+      <WhySpecialtyCoffee imageSrc={baristaImg} />
+      <OriginMatters />
       <CoffeeNewsSection />
 
       <CoffeeMarquee />

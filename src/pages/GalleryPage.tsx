@@ -31,6 +31,9 @@ export default function GalleryPage() {
     };
   }, []);
 
+  // беремо будь-яку картинку з recipes.json (першу з image)
+  const avatarImage = recipes.find((r) => r.image)?.image;
+
   return (
     <div className="min-h-screen bg-fefbf3 pt-30">
       <div className="mx-auto max-w-5xl px-4 pb-20 pt-10">
@@ -39,8 +42,16 @@ export default function GalleryPage() {
           {/* Avatar */}
           <div className="flex justify-center md:justify-start">
             <div className="h-36 w-36 rounded-full bg-linear-to-tr from-amber-400 via-amber-600 to-amber-800 p-1">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-5xl">
-                ☕
+              <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white">
+                {avatarImage ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${avatarImage}`}
+                    alt="coffeeexplorer avatar"
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <span className="text-5xl">☕</span>
+                )}
               </div>
             </div>
           </div>
@@ -83,39 +94,36 @@ export default function GalleryPage() {
           </div>
         </header>
 
-        {/* Highlights (optional) */}
+        {/* Highlights */}
         <div className="mb-10 flex gap-6 overflow-x-auto pb-2">
-          {/* Highlights — перші 7 рецептів */}
-          <div className="mb-10 flex gap-6 overflow-x-auto pb-2">
-            {recipes.slice(0, 7).map((r) => (
-              <div
-                key={r.id}
-                className="flex shrink-0 flex-col items-center gap-2"
-              >
-                <div className="h-20 w-20 rounded-full border-2 border-amber-300 bg-amber-50 p-1">
-                  {r.image ? (
-                    <img
-                      src={`${import.meta.env.BASE_URL}${r.image}`}
-                      alt={r.title}
-                      className="h-full w-full rounded-full object-cover"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center rounded-full bg-amber-100 text-2xl">
-                      ☕
-                    </div>
-                  )}
-                </div>
-                <span className="max-w-20 truncate text-xs text-neutral-600">
-                  {r.title}
-                </span>
+          {recipes.slice(0, 7).map((r) => (
+            <div
+              key={r.id}
+              className="flex shrink-0 flex-col items-center gap-2"
+            >
+              <div className="h-20 w-20 rounded-full border-2 border-amber-300 bg-amber-50 p-1">
+                {r.image ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${r.image}`}
+                    alt={r.title}
+                    className="h-full w-full rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center rounded-full bg-amber-100 text-2xl">
+                    ☕
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
+              <span className="max-w-20 truncate text-xs text-neutral-600">
+                {r.title}
+              </span>
+            </div>
+          ))}
         </div>
 
         <hr className="border-amber-200" />
 
-        {/* Grid toggle (Instagram має тут іконки, ми просто текст) */}
+        {/* Grid toggle */}
         <div className="my-4 flex justify-center gap-8 text-sm font-semibold text-4f2d20">
           <button className="border-b-2 border-4f2d20 pb-3">POSTS</button>
           <button className="pb-3 text-neutral-400">SAVED</button>
@@ -144,7 +152,7 @@ export default function GalleryPage() {
                     No image
                   </div>
                 )}
-                {/* Hover overlay (optional) */}
+
                 <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/40 text-white opacity-0 transition group-hover:opacity-100">
                   <span>♡ 42</span>
                   <span>💬 5</span>
