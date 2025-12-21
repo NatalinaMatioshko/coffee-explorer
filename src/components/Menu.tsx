@@ -23,15 +23,31 @@ const Menu: React.FC<MenuProps> = ({
   if (isFooter) {
     return (
       <nav>
-        <ul className="flex flex-col gap-2 text-base tracking-widest font-light uppercase">
+        <ul className="flex flex-col gap-2 text-sm tracking-widest font-light uppercase">
           {menuItems.map((item) => (
             <li key={item.name}>
               <NavLink
                 to={item.path}
-                className="hover:text-orange-200 transition-colors duration-300 relative group inline-block"
+                className={({ isActive }) =>
+                  [
+                    "transition-colors duration-300 relative group inline-block",
+                    "hover:text-orange-200",
+                    isActive ? "text-orange-200" : "",
+                  ].join(" ")
+                }
               >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-orange-200 transition-all duration-300 group-hover:w-full"></span>
+                {({ isActive }) => (
+                  <>
+                    <span>{item.name}</span>
+                    <span
+                      className={[
+                        "absolute -bottom-1 left-0 h-px bg-orange-200 transition-all duration-300",
+                        "group-hover:w-full",
+                        isActive ? "w-full" : "w-0",
+                      ].join(" ")}
+                    />
+                  </>
+                )}
               </NavLink>
             </li>
           ))}
@@ -41,19 +57,36 @@ const Menu: React.FC<MenuProps> = ({
   }
 
   // Desktop Menu
-
   if (!isMobile) {
     return (
       <nav className="hidden md:block">
-        <ul className="flex gap-8 lg:gap-12 text-base lg:text-lg xl:text-xl tracking-widest font-light uppercase">
+        <ul className="flex gap-8 lg:gap-12 text-sm lg:text-base xl:text-lg tracking-widest font-light uppercase">
           {menuItems.map((item) => (
-            <li
-              key={item.name}
-              className="cursor-pointer hover:text-[#ecc29c] transition-colors duration-300 relative group"
-            >
-              <NavLink to={item.path}>
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#ecc29c] transition-all duration-300 group-hover:w-full"></span>
+            <li key={item.name} className="relative">
+              <NavLink
+                to={item.path}
+                className="cursor-pointer transition-colors duration-300 relative group inline-block"
+              >
+                {({ isActive }) => (
+                  <>
+                    <span
+                      className={[
+                        "transition-colors duration-300",
+                        "group-hover:text-[#ecc29c]",
+                        isActive ? "text-[#ecc29c]" : "",
+                      ].join(" ")}
+                    >
+                      {item.name}
+                    </span>
+                    <span
+                      className={[
+                        "absolute -bottom-1 left-0 h-px bg-[#ecc29c] transition-all duration-300",
+                        "group-hover:w-full",
+                        isActive ? "w-full" : "w-0",
+                      ].join(" ")}
+                    />
+                  </>
+                )}
               </NavLink>
             </li>
           ))}
@@ -70,7 +103,13 @@ const Menu: React.FC<MenuProps> = ({
           key={item.name}
           to={item.path}
           style={{ animationDelay: `${index * 0.1}s` }}
-          className="flex items-center justify-between py-4 px-6 text-[#4f2d20] hover:bg-[#f9f3e9] transition-colors animate-slide-in-right"
+          className={({ isActive }) =>
+            [
+              "flex items-center justify-between py-4 px-6 transition-colors animate-slide-in-right",
+              "text-[#4f2d20] hover:bg-[#f9f3e9]",
+              isActive ? "bg-[#f9f3e9]" : "",
+            ].join(" ")
+          }
           onClick={onItemClick}
         >
           <span className="text-lg font-medium uppercase tracking-wide">

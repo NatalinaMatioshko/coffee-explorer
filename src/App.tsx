@@ -11,12 +11,12 @@ import CoursesPage from "./pages/CoursesPage";
 import ContactsPage from "./pages/ContactsPage";
 import ProductPage from "./pages/ProductPage";
 import GalleryPage from "./pages/GalleryPage";
-// import ScrollManager from "./components/ScrollManager";
+import ScrollManager from "./components/ScrollManager";
 
 export default function App() {
   return (
     <BrowserRouter basename="coffee-explorer">
-      {/* <ScrollManager /> */}
+      <ScrollManager />
       <Header />
       <main>
         <Routes>

@@ -82,7 +82,7 @@ const Header = () => {
 
             {/* User Profile Icon */}
             <button
-              onClick={() => setIsAuthOpen(true)} // <--- 3. Відкриваємо модалку при кліку
+              onClick={() => setIsAuthOpen(true)} //  Відкриваємо модалку при кліку
               className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 group"
               aria-label="User Profile"
             >
