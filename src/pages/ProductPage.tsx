@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useShop } from "../context/ShopContext";
+import { useFavoritesStore } from "../store/useFavoritesStore";
 import ProductReviews from "../sections/ProductReviews";
 import YouMayAlsoLike from "../sections/YouMayAlsoLike";
 
@@ -11,7 +11,7 @@ type Drink = {
   description: string;
   ingredients: string[];
   instructions: string[];
-  image?: string; // "recipes/1.webp"
+  image?: string;
 };
 
 type Bean = {
@@ -21,7 +21,7 @@ type Bean = {
   roast_level: string;
   process_method: string;
   quantity: number;
-  image?: string; // "coffees/..."
+  image?: string;
 };
 
 type Props = {
@@ -74,7 +74,7 @@ function Accordion({
 
 export default function ProductPage({ type }: Props) {
   const { id } = useParams();
-  const { addToCart, toggleFavorite } = useShop();
+  const { toggleFavorite, isFavorite } = useFavoritesStore();
 
   const [data, setData] = useState<Drink | Bean | null>(null);
   const [loading, setLoading] = useState(true);
@@ -85,7 +85,6 @@ export default function ProductPage({ type }: Props) {
       : "/coffee-explorer/beans.json";
   }, [type]);
 
-  // 1) завантаження даних
   useEffect(() => {
     if (!id) return;
 
@@ -99,7 +98,6 @@ export default function ProductPage({ type }: Props) {
       .finally(() => setLoading(false));
   }, [id, url]);
 
-  // 2) derived дані — ВАЖЛИВО: до будь-яких return
   const title = useMemo(() => {
     if (!data) return "";
     return "title" in data ? data.title : data.name;
@@ -122,7 +120,6 @@ export default function ProductPage({ type }: Props) {
     return [150, 200, 250, 300];
   }, [data]);
 
-  // важливо: не ініціалізувати від sizes (бо sizes ще порожній на першому рендері)
   const [size, setSize] = useState<number>(250);
 
   useEffect(() => {
@@ -135,7 +132,8 @@ export default function ProductPage({ type }: Props) {
     return `${import.meta.env.BASE_URL}${data.image}`;
   }, [data]);
 
-  // 3) ранні return — ТІЛЬКИ після всіх хуків
+  const favorite = data ? isFavorite(data.id) : false;
+
   if (loading) return <p className="p-10 text-[#4f2d20]">Loading…</p>;
   if (!data) return <p className="p-10 text-red-600">Product not found</p>;
 
@@ -157,22 +155,6 @@ export default function ProductPage({ type }: Props) {
 
         <div className="grid items-start gap-10 lg:grid-cols-2">
           {/* Left: image */}
-          {/* <div className="overflow-hidden rounded-2xl border border-amber-100 bg-white shadow-sm">
-            <div className="aspect-4/3 w-full bg-amber-50">
-              {imageSrc ? (
-                <img
-                  src={imageSrc}
-                  alt={title}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-sm text-neutral-500">
-                  No image
-                </div>
-              )}
-            </div>
-          </div> */}
           <div className="overflow-hidden rounded-2xl border border-amber-100 bg-white shadow-sm">
             {imageSrc ? (
               <img
@@ -185,6 +167,7 @@ export default function ProductPage({ type }: Props) {
               <div className="p-10 text-sm text-neutral-500">No image</div>
             )}
           </div>
+
           {/* Right: details */}
           <div>
             <h1 className="text-3xl font-semibold tracking-wide text-[#4f2d20] md:text-4xl">
@@ -244,7 +227,10 @@ export default function ProductPage({ type }: Props) {
               <button
                 type="button"
                 className="h-12 rounded-xl bg-[#4f2d20] px-8 text-sm text-[#fefbf3] transition hover:opacity-90"
-                onClick={() => addToCart({ id: String(data.id), title })}
+                onClick={() => {
+                  // Якщо потрібна функція кошика, створіть useCartStore окремо
+                  alert("Add to cart - implement cart store");
+                }}
               >
                 Add to cart
               </button>
@@ -252,8 +238,13 @@ export default function ProductPage({ type }: Props) {
               <button
                 type="button"
                 aria-label="Add to favorites"
-                onClick={() => toggleFavorite({ id: String(data.id), title })}
-                className="flex h-12 w-12 items-center justify-center rounded-xl border border-amber-200 text-[#4f2d20] transition hover:border-[#4f2d20]"
+                onClick={() => toggleFavorite({ id: data.id, title, type })}
+                className={[
+                  "flex h-12 w-12 items-center justify-center rounded-xl border transition",
+                  favorite
+                    ? "border-[#b35b3e] bg-[#b35b3e] text-white"
+                    : "border-amber-200 text-[#4f2d20] hover:border-[#4f2d20]",
+                ].join(" ")}
               >
                 ♥
               </button>
@@ -330,7 +321,6 @@ export default function ProductPage({ type }: Props) {
           </div>
         </div>
 
-        {/* Додаткові секції як раніше */}
         <ProductReviews />
         <YouMayAlsoLike />
       </div>

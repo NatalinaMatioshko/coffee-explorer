@@ -12,6 +12,7 @@ import ContactsPage from "./pages/ContactsPage";
 import ProductPage from "./pages/ProductPage";
 import GalleryPage from "./pages/GalleryPage";
 import ScrollManager from "./components/ScrollManager";
+import FavoritesPage from "./pages/FavoritesPage";
 
 export default function App() {
   return (
@@ -30,7 +31,7 @@ export default function App() {
 
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/contacts" element={<ContactsPage />} />
-          {/* <Route path="/feed" element={<FeedPage />} /> */}
+          <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
         </Routes>
       </main>

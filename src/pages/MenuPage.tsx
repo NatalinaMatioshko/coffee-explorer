@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import CoffeeCard from "../components/CoffeeCard";
 
 type DrinkCategory = "hot" | "iced";
 
@@ -26,6 +26,7 @@ function getCategory(recipe: RecipeFromDb): DrinkCategory {
   const text = `${recipe.title} ${recipe.method}`.toLowerCase();
   return text.includes("iced") || text.includes("cold") ? "iced" : "hot";
 }
+export type { Drink, RecipeFromDb };
 
 export default function MenuPage() {
   const [drinks, setDrinks] = useState<Drink[]>([]);
@@ -158,50 +159,7 @@ export default function MenuPage() {
         {!loading ? (
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((d) => (
-              <article
-                key={d.id}
-                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm transition hover:shadow-md"
-              >
-                {d.image ? (
-                  <div className="mb-4 overflow-hidden rounded-xl border border-amber-100 bg-amber-50">
-                    <img
-                      src={d.image}
-                      alt={d.title}
-                      className="h-44 w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                ) : null}
-
-                <div className="flex items-start justify-between gap-4">
-                  <h2 className="text-xl font-semibold text-[#4f2d20]">
-                    {d.title}
-                  </h2>
-                  <span className="rounded-full border border-amber-200 px-3 py-1 text-xs text-[#4f2d20]">
-                    {d.category}
-                  </span>
-                </div>
-
-                <p className="mt-3 text-sm text-neutral-700">{d.desc}</p>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {d.ingredients.slice(0, 8).map((ing) => (
-                    <span
-                      key={ing}
-                      className="rounded-full border border-amber-100 bg-amber-50 px-3 py-1 text-xs text-[#4f2d20]"
-                    >
-                      {ing}
-                    </span>
-                  ))}
-                </div>
-
-                <Link
-                  to={`/menu/${d.id}`}
-                  className="mt-6 inline-flex h-10 w-full items-center justify-center rounded-xl bg-[#4f2d20] text-sm text-[#fefbf3] transition hover:opacity-90"
-                >
-                  View details
-                </Link>
-              </article>
+              <CoffeeCard key={d.id} item={d} type="drink" />
             ))}
           </div>
         ) : null}

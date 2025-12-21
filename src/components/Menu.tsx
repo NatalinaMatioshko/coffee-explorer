@@ -12,6 +12,7 @@ const menuItems = [
   { name: "Beans", path: "/beans" },
   { name: "Courses", path: "/courses" },
   { name: "Contacts", path: "/contacts" },
+  { name: "Favorites", path: "/favorites" },
 ];
 
 const Menu: React.FC<MenuProps> = ({
@@ -60,7 +61,7 @@ const Menu: React.FC<MenuProps> = ({
   if (!isMobile) {
     return (
       <nav className="hidden md:block">
-        <ul className="flex gap-8 lg:gap-12 text-sm lg:text-base xl:text-lg tracking-widest font-light uppercase">
+        <ul className="flex gap-6 lg:gap-6 text-sm lg:text-sm xl:text-base tracking-widest font-light uppercase">
           {menuItems.map((item) => (
             <li key={item.name} className="relative">
               <NavLink

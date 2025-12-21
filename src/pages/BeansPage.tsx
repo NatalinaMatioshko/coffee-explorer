@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import CoffeeCard from "../components/CoffeeCard";
 
 type Bean = {
   id: number;
@@ -13,6 +14,8 @@ type Bean = {
 
 const INITIAL_VISIBLE = 6;
 
+export type BeanFromDb = Bean;
+export type { Bean };
 export default function BeansPage() {
   const [beans, setBeans] = useState<Bean[]>([]);
   const [loading, setLoading] = useState(true);
@@ -109,38 +112,7 @@ export default function BeansPage() {
         {/* Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((b) => (
-            <article
-              key={b.id}
-              className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm transition hover:shadow-md"
-            >
-              {b.image ? (
-                <img
-                  src={`${import.meta.env.BASE_URL}${b.image}`}
-                  alt={b.name}
-                  className="mb-4 h-40 w-full object-contain"
-                  loading="lazy"
-                />
-              ) : null}
-
-              <h2 className="text-xl font-semibold text-[#4f2d20]">{b.name}</h2>
-
-              <p className="mt-2 text-sm text-neutral-600">
-                {b.country} • {b.roast_level}
-              </p>
-
-              <p className="mt-2 text-sm text-neutral-700">
-                Process: {b.process_method}
-              </p>
-
-              <p className="mt-2 text-sm text-neutral-700">{b.quantity} g</p>
-
-              <Link
-                to={`/beans/${b.id}`}
-                className="mt-5 inline-flex h-10 w-full items-center justify-center rounded-xl bg-[#4f2d20] text-sm text-[#fefbf3] hover:opacity-90"
-              >
-                View details
-              </Link>
-            </article>
+            <CoffeeCard key={b.id} item={b} type="bean" />
           ))}
         </div>
 
