@@ -4,11 +4,11 @@ import { useFavoritesStore } from "../store/useFavoritesStore";
 import type { Bean, BeanFromDb } from "./BeansPage";
 import type { Drink, RecipeFromDb } from "./MenuPage";
 
-// Імпорт JSON
+
 import recipesJson from "../../public/recipes.json";
 import beansJson from "../../public/beans.json";
 
-// Перетворюємо JSON у доменні типи
+
 const allDrinks: Drink[] = (recipesJson as RecipeFromDb[]).map((r) => ({
   id: r.id,
   title: r.title,
@@ -39,7 +39,6 @@ type FavoriteItem =
 const FavoritesPage: React.FC = () => {
   const { items: favorites } = useFavoritesStore();
 
-  // Фільтруємо drinks та beans на основі favorites
   const favoriteDrinks = allDrinks.filter((d) =>
     favorites.some((f) => f.id === d.id && f.type === "drink")
   );
@@ -48,7 +47,7 @@ const FavoritesPage: React.FC = () => {
     favorites.some((f) => f.id === b.id && f.type === "bean")
   );
 
-  // Об'єднуємо в один масив для відображення
+
   const items: FavoriteItem[] = [
     ...favoriteDrinks.map((d) => ({ data: d, type: "drink" as const })),
     ...favoriteBeans.map((b) => ({ data: b, type: "bean" as const })),

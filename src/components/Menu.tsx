@@ -20,7 +20,7 @@ const Menu: React.FC<MenuProps> = ({
   isFooter = false,
   onItemClick,
 }) => {
-  // Footer Menu
+
   if (isFooter) {
     return (
       <nav>
@@ -57,7 +57,7 @@ const Menu: React.FC<MenuProps> = ({
     );
   }
 
-  // Desktop Menu
+
   if (!isMobile) {
     return (
       <nav className="hidden md:block">
@@ -96,7 +96,7 @@ const Menu: React.FC<MenuProps> = ({
     );
   }
 
-  // Mobile Menu
+
   return (
     <nav className="py-4">
       {menuItems.map((item, index) => (

@@ -31,15 +31,15 @@ export default function GalleryPage() {
     };
   }, []);
 
-  // беремо будь-яку картинку з recipes.json (першу з image)
+
   const avatarImage = recipes.find((r) => r.image)?.image;
 
   return (
     <div className="min-h-screen bg-fefbf3 pt-30">
       <div className="mx-auto max-w-5xl px-4 pb-20 pt-10">
-        {/* Profile header */}
+
         <header className="mb-10 flex flex-col gap-8 md:flex-row md:items-center">
-          {/* Avatar */}
+    
           <div className="flex justify-center md:justify-start">
             <div className="h-36 w-36 rounded-full bg-linear-to-tr from-amber-400 via-amber-600 to-amber-800 p-1">
               <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white">
@@ -56,7 +56,7 @@ export default function GalleryPage() {
             </div>
           </div>
 
-          {/* Info */}
+      
           <div className="flex-1 text-center md:text-left">
             <div className="mb-6 flex flex-col items-center gap-4 md:flex-row">
               <h1 className="text-2xl font-light text-4f2d20">
@@ -94,7 +94,7 @@ export default function GalleryPage() {
           </div>
         </header>
 
-        {/* Highlights */}
+     
         <div className="mb-10 flex gap-6 overflow-x-auto pb-2">
           {recipes.slice(0, 7).map((r) => (
             <div
@@ -123,14 +123,14 @@ export default function GalleryPage() {
 
         <hr className="border-amber-200" />
 
-        {/* Grid toggle */}
+
         <div className="my-4 flex justify-center gap-8 text-sm font-semibold text-4f2d20">
           <button className="border-b-2 border-4f2d20 pb-3">POSTS</button>
           <button className="pb-3 text-neutral-400">SAVED</button>
           <button className="pb-3 text-neutral-400">TAGGED</button>
         </div>
 
-        {/* Photo grid */}
+
         {loading ? (
           <p className="mt-10 text-center text-neutral-500">Loading...</p>
         ) : (

@@ -9,7 +9,6 @@ const CoursesPage = () => {
 
   return (
     <div className="min-h-screen bg-[#fefbf3]">
-      {/* Hero */}
       <section
         className="flex justify-center flex-col  relative py-28 min-h-screen bg-[#4f2d20] text-[#f9f3e9] bg-fixed "
         style={{
@@ -18,7 +17,6 @@ const CoursesPage = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* затемнення */}
         <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/70 pointer-events-none"></div>
 
         <div className="  relative max-w-360 mx-auto px-4 text-center ">
@@ -45,7 +43,6 @@ const CoursesPage = () => {
         </div>
       </section>
 
-      {/* Courses */}
       <section id="courses" className="py-20">
         <div className="max-w-360 mx-auto px-4">
           <h3 className="text-3xl font-bold text-[#4f2d20] text-center">

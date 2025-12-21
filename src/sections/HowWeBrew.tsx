@@ -25,7 +25,6 @@ Understanding the method helps you choose the right coffee for your taste.`,
   return (
     <section className="py-20 bg-[#f9f3e9]">
       <div className="container mx-auto grid items-center gap-12 px-4 md:grid-cols-2">
-        {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -41,7 +40,6 @@ Understanding the method helps you choose the right coffee for your taste.`,
           />
         </motion.div>
 
-        {/* Content */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}

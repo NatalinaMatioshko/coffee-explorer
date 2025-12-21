@@ -55,7 +55,7 @@ export default function ProductReviews() {
     const card = container.querySelector<HTMLElement>("[data-review-card]");
     if (!card) return;
 
-    const gap = 24; // gap-6
+    const gap = 24;
     const cardWidth = card.offsetWidth + gap;
     container.scrollTo({ left: cardWidth * next, behavior: "smooth" });
   };
@@ -85,7 +85,6 @@ export default function ProductReviews() {
             ref={listRef}
             className="flex gap-6 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [-ms-overflow-style:none]"
           >
-            {/* приховати scrollbar у webkit */}
             <style>{`div::-webkit-scrollbar{display:none;}`}</style>
 
             {reviews.map((r) => (
@@ -113,7 +112,6 @@ export default function ProductReviews() {
             ))}
           </div>
 
-          {/* Кнопки як на скріні */}
           <div className="mt-6 flex items-center justify-center gap-3">
             <button
               type="button"

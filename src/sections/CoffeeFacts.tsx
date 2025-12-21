@@ -56,7 +56,7 @@ const CoffeeFacts: React.FC = () => {
               transition={{ duration: 0.7, delay: index * 0.15 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              {/* Картинка */}
+
               <motion.div
                 className="w-full lg:w-1/2"
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -71,7 +71,7 @@ const CoffeeFacts: React.FC = () => {
                 />
               </motion.div>
 
-              {/* Контент */}
+
               <motion.div
                 className="rounded-2xl w-full lg:w-1/2 space-y-6"
                 initial={{ opacity: 0, x: index % 2 === 0 ? 40 : -40 }}
@@ -91,7 +91,7 @@ const CoffeeFacts: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Статистика */}
+
                 <div className="grid grid-cols-2 gap-6 pt-6 border-t border-[#8B5A3C]">
                   {fact.stats.map((stat, idx) => (
                     <motion.div

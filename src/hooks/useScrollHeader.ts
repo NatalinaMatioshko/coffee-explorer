@@ -1,4 +1,3 @@
-// src/hooks/useScrollHeader.ts
 import { useEffect, useState, useRef } from "react";
 
 export const useScrollHeader = (targetSelector: string) => {
@@ -18,17 +17,15 @@ export const useScrollHeader = (targetSelector: string) => {
         lastScrollY.current = currentScrollY;
 
         if (!entry.isIntersecting && scrollingDown) {
-          // Виходимо з першої секції при скролі вниз - ховаємо хедер
           setIsVisible(false);
         } else if (entry.isIntersecting && !scrollingDown) {
-          // Повертаємося до першої секції при скролі вгору - показуємо хедер
           setIsVisible(true);
         }
       },
       {
         root: null,
         threshold: 0,
-        rootMargin: "0px 0px -90% 0px", // Спрацює коли виходимо з секції
+        rootMargin: "0px 0px -90% 0px",
       }
     );
 

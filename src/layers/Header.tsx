@@ -16,7 +16,6 @@ const Header = () => {
   const { isAuth, user, logout } = useAuthStore();
   const location = useLocation();
 
-  // Ховаємо хедер на головній сторінці після другої секції
   const isVisible = useScrollHeader(
     location.pathname === "/" ? ".section-1" : ""
   );
@@ -24,11 +23,10 @@ const Header = () => {
   const darkHeaderRoutes = [
     "/menu",
     "/beans",
-    "/courses",
+
     "/contacts",
     "/product",
     "/favorites",
-    "/gallery",
   ];
   const isDark = darkHeaderRoutes.some((r) => location.pathname.startsWith(r));
 
@@ -42,7 +40,7 @@ const Header = () => {
   `}
       >
         <div className="w-full max-w-360 mx-auto flex justify-between items-center gap-6 lg:gap-12">
-          {/* ... решта коду без змін ... */}
+          {/* ? */}
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsMenuOpen(true)}
@@ -89,11 +87,11 @@ const Header = () => {
               className="flex items-center justify-center w-8 h-8 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 group"
               aria-label="User Profile"
             >
-              <FaUserAlt className="w-4 h-4" />
+              <FaUserAlt className="w-3 h-3" />
             </button>
 
             <button className="flex items-center justify-center w-8 h-8 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 group">
-              <CiShoppingBasket className="w-5 h-5 stroke-1 group-hover:stroke-[1.5] transition-all duration-300" />
+              <CiShoppingBasket className="w-4 h-4 stroke-1 group-hover:stroke-[1.5] transition-all duration-300" />
             </button>
           </div>
         </div>

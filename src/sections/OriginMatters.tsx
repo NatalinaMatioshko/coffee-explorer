@@ -61,7 +61,6 @@ const OriginMatters: React.FC = () => {
                 index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
               } items-center gap-12`}
             >
-              {/* Картинка */}
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -77,7 +76,6 @@ const OriginMatters: React.FC = () => {
                 />
               </motion.div>
 
-              {/* Контент */}
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -99,7 +97,6 @@ const OriginMatters: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Статистика */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}

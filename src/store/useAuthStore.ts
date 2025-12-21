@@ -30,7 +30,8 @@ export const useAuthStore = create<AuthState>()(
         set({ mode });
       },
 
-      // DEMO-логін без бекенда
+
+      
       async login(email: string) {
         const fakeUser: User = {
           id: 1,
@@ -40,7 +41,8 @@ export const useAuthStore = create<AuthState>()(
         set({ user: fakeUser, isAuth: true });
       },
 
-      // DEMO-реєстрація без бекенда
+
+      
       async register(name: string, email: string) {
         const fakeUser: User = {
           id: 1,
@@ -55,7 +57,7 @@ export const useAuthStore = create<AuthState>()(
       },
     }),
     {
-      name: "auth-store", // ключ у localStorage
+      name: "auth-store", 
     }
   )
 );

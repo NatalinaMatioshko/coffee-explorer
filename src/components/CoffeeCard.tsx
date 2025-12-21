@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { useFavoritesStore } from "../store/useFavoritesStore";
 
-// Типи для Drink та Bean
 type Drink = {
   id: number;
   title: string;
@@ -47,46 +46,45 @@ const CoffeeCard: React.FC<CoffeeCardProps> = ({ item, type }) => {
 
   return (
     <article className="relative rounded-2xl border border-amber-100 bg-white p-6 shadow-sm transition hover:shadow-md flex flex-col h-full">
-      {/* Heart */}
       <button
         type="button"
         onClick={() => toggleFavorite({ id, title, type })}
-        className="absolute right-4 top-4 text-xl"
+        className="absolute right-4 top-4 text-xl z-10"
         aria-label="Toggle favorite"
       >
         <FaHeart className={favorite ? "text-[#b35b3e]" : "text-neutral-300"} />
       </button>
 
-      {/* Image */}
       {imageSrc ? (
         <div className="mb-4 overflow-hidden rounded-xl border border-amber-100 bg-amber-50">
           <img
             src={imageSrc}
             alt={title}
-            className="h-44 w-full object-cover"
+            className={`h-44 w-full ${
+              type === "drink" ? "object-cover" : "object-contain"
+            }`}
             loading="lazy"
           />
         </div>
       ) : null}
 
-      {/* Content */}
-      <div className="flex-1 flex flex-col">
-        <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-col flex-1">
+        <div className="flex items-start justify-between gap-4 mb-3">
           <h2 className="text-xl font-semibold text-[#4f2d20]">{title}</h2>
           {"category" in item ? (
-            <span className="rounded-full border border-amber-200 px-3 py-1 text-xs text-[#4f2d20]">
+            <span className="rounded-full border border-amber-200 px-3 py-1 text-xs text-[#4f2d20] whitespace-nowrap">
               {item.category}
             </span>
           ) : null}
         </div>
 
-        <p className="mt-3 text-sm text-neutral-700 line-clamp-3">
+        <p className="text-sm text-neutral-700 line-clamp-3 mb-6">
           {shortText}
         </p>
 
         <Link
           to={detailsLink}
-          className="mt-6 inline-flex h-10 w-full items-center justify-center rounded-xl bg-[#4f2d20] text-sm text-[#fefbf3] transition hover:opacity-90"
+          className="mt-auto inline-flex h-10 w-full items-center justify-center rounded-xl bg-[#4f2d20] text-sm text-[#fefbf3] transition hover:opacity-90"
         >
           View details
         </Link>

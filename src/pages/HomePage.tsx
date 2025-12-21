@@ -15,7 +15,6 @@ const HomePage: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>
-      {/* Hero Section */}
       <div
         className="section-1 w-full min-h-screen bg-cover bg-center bg-no-repeat text-white relative flex flex-col"
         style={{ backgroundImage: `url(${bgImage})` }}
@@ -23,7 +22,6 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="w-full max-w-360 mx-auto relative z-10 px-4 md:px-10 flex flex-col min-h-screen">
-          {/* Main Content */}
           <div className="flex-1 flex flex-col items-center justify-center py-20">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Sonsie_One'] text-[#F7F5F2] title-shimmer drop-shadow-lg text-center px-4">
               Coffee Explorer
@@ -39,7 +37,7 @@ const HomePage: React.FC = () => {
 
         <Marquee />
       </div>
-      {/* Sections */}
+
       <HowWeBrew imageSrc={howWeBrewImg} />
       <CoffeeFacts />
       <WhySpecialtyCoffee imageSrc={baristaImg} />

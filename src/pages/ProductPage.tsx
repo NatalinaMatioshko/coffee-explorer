@@ -140,7 +140,6 @@ export default function ProductPage({ type }: Props) {
   return (
     <div className="pt-10 min-h-screen bg-[#f9f3e9]">
       <div className="mx-auto max-w-360 px-4 pt-24 pb-16">
-        {/* Breadcrumbs */}
         <div className="mb-6 text-xs text-neutral-500">
           <Link to="/" className="hover:underline">
             Home
@@ -154,7 +153,6 @@ export default function ProductPage({ type }: Props) {
         </div>
 
         <div className="grid items-start gap-10 lg:grid-cols-2">
-          {/* Left: image */}
           <div className="overflow-hidden rounded-2xl border border-amber-100 bg-white shadow-sm">
             {imageSrc ? (
               <img
@@ -168,7 +166,6 @@ export default function ProductPage({ type }: Props) {
             )}
           </div>
 
-          {/* Right: details */}
           <div>
             <h1 className="text-3xl font-semibold tracking-wide text-[#4f2d20] md:text-4xl">
               {title.toUpperCase()}
@@ -191,7 +188,6 @@ export default function ProductPage({ type }: Props) {
                 : "A selected coffee bean with a clean profile and balanced taste."}
             </p>
 
-            {/* Size */}
             {sizes.length ? (
               <div className="mt-6">
                 <div className="flex items-center gap-2 text-sm text-neutral-700">
@@ -222,13 +218,11 @@ export default function ProductPage({ type }: Props) {
               </div>
             ) : null}
 
-            {/* Actions */}
             <div className="mt-6 flex items-center gap-4">
               <button
                 type="button"
                 className="h-12 rounded-xl bg-[#4f2d20] px-8 text-sm text-[#fefbf3] transition hover:opacity-90"
                 onClick={() => {
-                  // Якщо потрібна функція кошика, створіть useCartStore окремо
                   alert("Add to cart - implement cart store");
                 }}
               >
@@ -250,7 +244,6 @@ export default function ProductPage({ type }: Props) {
               </button>
             </div>
 
-            {/* Accordions */}
             <div className="mt-8">
               <Accordion title="Description" defaultOpen>
                 {"country" in data ? (

@@ -32,7 +32,6 @@ const CoffeeMarquee = () => {
 
     if (!section || !marquee) return;
 
-    // Intersection Observer - запускає анімацію тільки коли секція у viewport
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -46,7 +45,7 @@ const CoffeeMarquee = () => {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // 50% секції має бути видимо
+        threshold: 0.5,
       }
     );
 
@@ -62,9 +61,7 @@ const CoffeeMarquee = () => {
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-gray-900 to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-gray-900 to-transparent z-10" />
 
-        {/* Marquee container */}
         <div ref={marqueeRef} className="flex gap-6">
-          {/* Перший набір картинок */}
           {coffeeImages.map((img, index) => (
             <div
               key={`first-${index}`}
@@ -78,7 +75,6 @@ const CoffeeMarquee = () => {
             </div>
           ))}
 
-          {/* для безперервного loop */}
           {coffeeImages.map((img, index) => (
             <div
               key={`second-${index}`}

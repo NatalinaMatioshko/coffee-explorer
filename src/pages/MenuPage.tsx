@@ -44,7 +44,7 @@ export default function MenuPage() {
         setLoading(true);
         setError(null);
 
-        // якщо recipes.json у public, то BASE_URL + "recipes.json" працює і в dev, і на Pages [file:1]
+
         const res = await fetch(`${import.meta.env.BASE_URL}recipes.json`);
         if (!res.ok) throw new Error(`Failed to load recipes (${res.status})`);
 
@@ -55,7 +55,6 @@ export default function MenuPage() {
           title: r.title,
           desc: r.description?.trim() || "No description yet.",
           ingredients: Array.isArray(r.ingredients) ? r.ingredients : [],
-          // ВАЖЛИВО: НЕ додаємо "media/". У тебе вже готовий шлях типу "recipes/1.webp" [file:11]
           image: r.image ? `${import.meta.env.BASE_URL}${r.image}` : undefined,
           category: getCategory(r),
         }));
@@ -93,7 +92,7 @@ export default function MenuPage() {
   return (
     <div className="min-h-screen bg-[#fefbf3] pt-20">
       <div className="mx-auto max-w-360 px-4 py-20">
-        {/* Header */}
+
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs uppercase tracking-widest text-neutral-500">
@@ -104,7 +103,6 @@ export default function MenuPage() {
             </h1>
           </div>
 
-          {/* Controls */}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
             <div className="inline-flex overflow-hidden rounded-full border border-amber-200 bg-white">
               <button
@@ -151,11 +149,10 @@ export default function MenuPage() {
           </div>
         </div>
 
-        {/* Status */}
+
         {error ? <p className="mt-8 text-red-700">{error}</p> : null}
         {loading ? <p className="mt-8 text-[#4f2d20]">Loading…</p> : null}
 
-        {/* Grid */}
         {!loading ? (
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((d) => (
@@ -164,7 +161,6 @@ export default function MenuPage() {
           </div>
         ) : null}
 
-        {/* Empty state */}
         {!loading && filtered.length === 0 ? (
           <div className="mt-12 rounded-2xl border border-amber-200 bg-white p-8 text-center text-[#4f2d20]">
             Nothing found. Try another search.

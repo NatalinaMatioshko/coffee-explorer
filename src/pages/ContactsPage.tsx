@@ -18,7 +18,7 @@ export default function ContactsPage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Тут можна додати відправку на сервер
-    // console.log("Form submitted:", formData);
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
   };
@@ -26,7 +26,6 @@ export default function ContactsPage() {
   return (
     <div className="min-h-screen bg-[#f9f3e9] pt-30 text-[#4f2d20]">
       <div className="mx-auto max-w-7xl px-4 py-20">
-        {/* Header */}
         <div className="mb-12 text-center">
           <p className="text-xs uppercase tracking-widest ">Get in touch</p>
           <h1 className="mt-2 text-4xl font-bold  md:text-5xl">Contact Us</h1>
@@ -34,7 +33,6 @@ export default function ContactsPage() {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
-          {/* Contact Form */}
           <div className="rounded-2xl border border-amber-100 bg-white p-8 shadow-sm">
             <h2 className="mb-6 text-2xl font-semibold">Send us a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -113,9 +111,7 @@ export default function ContactsPage() {
             </form>
           </div>
 
-          {/* Contact Info */}
           <div className="space-y-6">
-            {/* Info Cards */}
             <div className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-xl font-semibold ">Visit Us</h3>
               <div className="space-y-4 ">
@@ -173,14 +169,11 @@ export default function ContactsPage() {
               </div>
             </div>
 
-            {/* Map placeholder */}
             <div
               id="map"
               className="overflow-hidden rounded-2xl border border-amber-100 bg-amber-50 shadow-sm"
             >
               <div className="flex h-64 items-center justify-center text-neutral-500">
-                {/* Можна додати Google Maps iframe або Leaflet */}
-                {/* <p className="text-sm">🗺️ Map coming soon</p> */}
                 <GoogleMap apiKey={apiKey} />
               </div>
             </div>

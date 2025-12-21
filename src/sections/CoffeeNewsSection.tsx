@@ -76,14 +76,12 @@ export default function CoffeeNewsSection() {
                       loading="lazy"
                       className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
                       onError={(e) => {
-                        // якщо RSS-картинка зламалась — прибираємо її (залишиться фон)
                         (e.currentTarget as HTMLImageElement).style.display =
                           "none";
                       }}
                     />
                   ) : null}
 
-                  {/* бейдж джерела */}
                   <div className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-xs text-[#4f2d20] backdrop-blur">
                     {n.source}
                   </div>

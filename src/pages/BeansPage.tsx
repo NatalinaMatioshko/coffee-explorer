@@ -23,7 +23,7 @@ export default function BeansPage() {
   const [roast, setRoast] = useState("all");
   const [country, setCountry] = useState("all");
 
-  // showMore зберігаємо "по фільтру" => при зміні фільтра автоматично повертається до false
+
   const [showAllByFilter, setShowAllByFilter] = useState<
     Record<string, boolean>
   >({});
@@ -80,7 +80,7 @@ export default function BeansPage() {
       <div className="mx-auto max-w-360 px-4 py-20">
         <h1 className="mb-6 text-4xl font-bold text-[#4f2d20]">Coffee Beans</h1>
 
-        {/* Filters */}
+
         <div className="mb-10 flex flex-wrap gap-4">
           <select
             value={roast}
@@ -109,21 +109,21 @@ export default function BeansPage() {
           </select>
         </div>
 
-        {/* Grid */}
+ 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((b) => (
             <CoffeeCard key={b.id} item={b} type="bean" />
           ))}
         </div>
 
-        {/* Empty state */}
+       
         {!loading && filtered.length === 0 ? (
           <div className="mt-12 rounded-2xl border border-amber-200 bg-white p-8 text-center text-[#4f2d20]">
             Nothing found. Try another search or filters.
           </div>
         ) : null}
 
-        {/* Show more / less */}
+   
         {filtered.length > INITIAL_VISIBLE ? (
           <div className="mt-12 text-center">
             {!showAll ? (

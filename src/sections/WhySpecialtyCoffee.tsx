@@ -17,14 +17,13 @@ export default function WhySpecialtyCoffee({
   description = `Specialty coffee is about transparency, quality, and respect for origin.
 Every bean is evaluated, every roast intentional.`,
   ctaLabel = "Learn more",
-  // ctaTo = "/about",
+
   imageSrc,
   imageAlt = "Barista preparing specialty coffee",
 }: WhySpecialtyCoffeeProps) {
   return (
     <section className="bg-[#f9f3e9] py-20">
       <div className="container mx-auto grid items-center gap-12 px-4 md:grid-cols-2">
-        {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -40,7 +39,6 @@ Every bean is evaluated, every roast intentional.`,
           />
         </motion.div>
 
-        {/* Content */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}

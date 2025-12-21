@@ -26,7 +26,6 @@ export default function CourseModal({ course, onClose }: CourseModalProps) {
 
   return (
     <div className="fixed inset-0 z-100">
-      {/* backdrop */}
       <button
         type="button"
         onClick={onClose}
@@ -34,7 +33,6 @@ export default function CourseModal({ course, onClose }: CourseModalProps) {
         aria-label="Close modal"
       />
 
-      {/* panel */}
       <div className="relative mx-auto mt-24 w-[min(720px,92vw)] max-h-[80vh] overflow-auto rounded-2xl bg-[#fefbf3] p-6 shadow-xl">
         <div className="flex items-start justify-between gap-4">
           <div>
