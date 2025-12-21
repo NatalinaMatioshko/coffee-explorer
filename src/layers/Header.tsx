@@ -6,9 +6,14 @@ import Logo from "../components/Logo";
 import Menu from "../components/Menu";
 import MobileMenu from "../components/MobileMenu";
 import SearchBar from "../components/SearchBar";
+import AuthModal from "../components/AuthModal";
+import { useAuthStore } from "../store/useAuthStore";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const { isAuth, user, logout } = useAuthStore();
   const location = useLocation();
 
   const darkHeaderRoutes = [
@@ -62,7 +67,28 @@ const Header = () => {
           <div className="flex items-center gap-2 md:gap-4">
             {/* Пошук */}
             <SearchBar variant="desktop" />
-            <SearchBar variant="mobile" />
+
+            {isAuth ? (
+              <div className="flex items-center gap-3 text-[#f9f3e9]">
+                <span className="text-sm">Hi, {user?.name}</span>
+                <button
+                  onClick={logout}
+                  className="text-xs underline hover:opacity-80"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : null}
+
+            {/* User Profile Icon */}
+            <button
+              onClick={() => setIsAuthOpen(true)} // <--- 3. Відкриваємо модалку при кліку
+              className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 group"
+              aria-label="User Profile"
+            >
+              <FaUserAlt />
+            </button>
+            {/* <SearchBar variant="mobile" /> */}
 
             {/* Кошик */}
             <button className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 group">
@@ -70,15 +96,17 @@ const Header = () => {
             </button>
 
             {/* Профіль */}
-            <button className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 ">
+            {/* <button className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] active:bg-white active:text-[#4f2d20] transition-all duration-300 ">
               <FaUserAlt />
-            </button>
+            </button> */}
           </div>
         </div>
+        {/* Mobile Menu */}
+        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </header>
 
-      {/* Mobile Menu */}
-      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      {/* 4. Рендеримо модалку (можна тут, або через Portal, але так простіше) */}
+      <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
     </>
   );
 };
