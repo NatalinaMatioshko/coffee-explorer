@@ -23,10 +23,10 @@ const Header = () => {
   const darkHeaderRoutes = [
     "/menu",
     "/beans",
-
     "/contacts",
     "/product",
     "/favorites",
+    "*",
   ];
   const isDark = darkHeaderRoutes.some((r) => location.pathname.startsWith(r));
 
