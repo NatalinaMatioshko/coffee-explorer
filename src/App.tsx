@@ -14,6 +14,7 @@ import GalleryPage from "./pages/GalleryPage";
 import ScrollManager from "./components/ScrollManager";
 import FavoritesPage from "./pages/FavoritesPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <ScrollToTop />
     </BrowserRouter>
   );
 }
