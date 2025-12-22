@@ -15,7 +15,6 @@
     "@googlemaps/js-api-loader": "^2.0.2",
     "@tailwindcss/vite": "^4.1.18",
     "framer-motion": "^12.23.26",
-    "jquery": "^3.7.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",

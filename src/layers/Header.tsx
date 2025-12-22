@@ -76,6 +76,7 @@ const Header = () => {
                 <button
                   onClick={logout}
                   className="text-xs underline hover:opacity-80"
+                  aria-label="User logout"
                 >
                   Logout
                 </button>
@@ -85,13 +86,16 @@ const Header = () => {
             <button
               onClick={() => setIsAuthOpen(true)}
               className="flex items-center justify-center w-8 h-8 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 group"
-              aria-label="User Profile"
+              aria-label="User profile and authentication"
             >
               <FaUserAlt className="w-3 h-3" />
             </button>
 
             <button className="flex items-center justify-center w-8 h-8 border border-white rounded-full hover:bg-white hover:text-[#4f2d20] transition-all duration-300 group">
-              <CiShoppingBasket className="w-4 h-4 stroke-1 group-hover:stroke-[1.5] transition-all duration-300" />
+              <CiShoppingBasket
+                className="w-4 h-4 stroke-1 group-hover:stroke-[1.5] transition-all duration-300"
+                aria-label="Shopping cart"
+              />
             </button>
           </div>
         </div>

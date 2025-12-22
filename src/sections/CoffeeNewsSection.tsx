@@ -31,7 +31,7 @@ export default function CoffeeNewsSection() {
     <section className=" bg-[#f9f3e9] py-16">
       <div className="container mx-auto px-4">
         <div className="mb-8">
-          <p className="text-sm uppercase tracking-widest text-neutral-500">
+          <p className="text-sm uppercase tracking-widest text-[#4f2d20]">
             Coffee news
           </p>
           <h2 className="text-3xl font-light text-neutral-900 md:text-4xl">

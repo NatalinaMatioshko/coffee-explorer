@@ -61,6 +61,7 @@ Every bean is evaluated, every roast intentional.`,
           <NavLink
             to="/courses"
             className="inline-block rounded-full border border-[#4f2d20] px-6 py-3 text-sm text-[#4f2d20] transition hover:bg-[#4f2d20] hover:text-[#f9f3e9]"
+            aria-label={`Learn more about ${title} course`}
           >
             {ctaLabel}
           </NavLink>
