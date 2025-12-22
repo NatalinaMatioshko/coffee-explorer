@@ -109,7 +109,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
         <div className="mt-6 text-center text-sm text-neutral-600">
           {mode === "login" ? (
             <>
-              Don&apos;t have an account?{" "}
+              Don&apos;t have an account?
               <button
                 type="button"
                 onClick={() => setMode("register")}

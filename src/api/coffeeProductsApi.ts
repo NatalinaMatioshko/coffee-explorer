@@ -21,7 +21,6 @@ async function request<T>(path: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-// ✔️ всі продукти
 export async function getProducts() {
   const data = await request<unknown>("/");
   if (!Array.isArray(data)) {
@@ -30,7 +29,6 @@ export async function getProducts() {
   return data as CoffeeProduct[];
 }
 
-// ✔️ один продукт
 export async function getProductById(id: number | string) {
   return request<CoffeeProduct>(`/${id}`);
 }

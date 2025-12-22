@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
-
 html,
 body {
   margin: 0;
@@ -34,7 +32,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
 
-    /* Прозорий колір тексту */
+
     -webkit-text-fill-color: transparent;
     color: transparent;
 
@@ -43,7 +41,7 @@ body {
     animation: gradient 5s linear infinite;
   }
 
-  /* НОВА Marquee анімація */
+
   .animate-marquee {
     animation: marqueeScroll 10s linear infinite;
     will-change: transform;
@@ -67,7 +65,7 @@ body {
     animation-play-state: paused;
   } */
 
-  /*  анімація для меню */
+
   .animate-slide-in {
     animation: slideIn 0.3s ease-out;
   }

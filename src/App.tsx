@@ -32,7 +32,7 @@ export default function App() {
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="*" element={<NotFound />} /> {/* 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

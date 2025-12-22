@@ -18,11 +18,10 @@ function viaAllOrigins(url: string) {
   return `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
 }
 
-// fallback: іконка сайту (працює майже завжди)
 function faviconFromLink(link: string) {
   try {
     const host = new URL(link).hostname;
-    // простий публічний сервіс іконок
+
     return `https://www.google.com/s2/favicons?domain=${host}&sz=128`;
   } catch {
     return undefined;
@@ -30,20 +29,17 @@ function faviconFromLink(link: string) {
 }
 
 function pickImageUrl(item: Element): string | undefined {
-  // 1) media:content / media:thumbnail (namespace важливий, тому читаємо через querySelector з екрануванням)
   const mediaContent =
     item.querySelector("media\\:content")?.getAttribute("url") ||
     item.querySelector("media\\:thumbnail")?.getAttribute("url");
 
   if (mediaContent) return mediaContent;
 
-  // 2) enclosure
   const enclosure = item.querySelector("enclosure");
   const encUrl = enclosure?.getAttribute("url") || undefined;
   const encType = enclosure?.getAttribute("type") || "";
   if (encUrl && encType.startsWith("image/")) return encUrl;
 
-  // 3) first <img src="..."> inside content/description (HTML може бути екранований)
   const html =
     item.querySelector("content\\:encoded")?.textContent ||
     item.querySelector("description")?.textContent ||

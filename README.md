@@ -54,8 +54,6 @@ npm install
 Запустити dev сервер
 npm run dev
 
-text
-
 Відкрийте [http://localhost:5173](http://localhost:5173) в браузері.
 
 ## 🚀 Команди
@@ -72,38 +70,6 @@ npm run deploy # Деплой на GitHub Pages
 
 Lint
 npm run lint # ESLint перевірка
-
-text
-
-## 📁 Структура проєкту
-
-coffee-explorer/
-├── public/ # Статичні файли
-│ └── assets/ # Зображення, шрифти
-├── src/
-│ ├── components/ # React компоненти
-│ │ ├── Header.tsx
-│ │ ├── Menu.tsx
-│ │ ├── MobileMenu.tsx
-│ │ ├── Logo.tsx
-│ │ └── ...
-│ ├── pages/ # Сторінки додатку
-│ │ ├── Home.tsx
-│ │ ├── MenuPage.tsx
-│ │ ├── BeansPage.tsx
-│ │ └── ...
-│ ├── store/ # Zustand stores
-│ │ ├── useAuthStore.ts
-│ │ └── useFavoritesStore.ts
-│ ├── hooks/ # Custom React hooks
-│ ├── App.tsx # Головний компонент
-│ ├── main.tsx # Entry point
-│ └── index.css # Глобальні стилі
-├── tailwind.config.js # Tailwind конфігурація
-├── tsconfig.json # TypeScript конфігурація
-└── vite.config.ts # Vite конфігурація
-
-text
 
 ## 🎨 Дизайн
 
@@ -154,9 +120,9 @@ text
 **Natalia Matioshko**
 
 - GitHub: [@NatalinaMatioshko](https://github.com/NatalinaMatioshko)
-- Email: 165213062+NatalinaMatioshko@users.noreply.github.com
+- Email: ma.nataliem@proton.me
 
-## 🙏 Подяки
+## Доповнення
 
 - Іконки від [React Icons](https://react-icons.github.io/react-icons/)
 - Анімації від [Framer Motion](https://www.framer.com/motion/)
