@@ -19,7 +19,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         onClick={onClose}
       />
 
-      <div className="absolute left-0 top-0 bottom-0 w-[85%] max-w-sm bg-[#f9f3e9] shadow-2xl animate-slide-in-left">
+      <div className="absolute left-0 top-0 bottom-0 w-[85%] max-w-sm  shadow-2xl animate-slide-in-left bg-[#f9f3e9]">
         <div className="flex items-center justify-between p-4 border-b border-amber-200 bg-[#4f2d20]">
           <Logo variant="small" />
 
@@ -44,7 +44,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        <div className="p-4 border-b border-[#f9f3e9]">
+        <div className="bg-[#f9f3e9] p-4 border-b border-[#f9f3e9]">
           <div className="relative flex items-center border border-[#5f2109] rounded-full px-4 py-2 bg-transparent">
             <IoSearch className="w-4 h-4 opacity-50 text-[#4f2d20]" />
             <input

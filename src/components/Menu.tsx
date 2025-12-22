@@ -20,7 +20,6 @@ const Menu: React.FC<MenuProps> = ({
   isFooter = false,
   onItemClick,
 }) => {
-
   if (isFooter) {
     return (
       <nav>
@@ -57,10 +56,9 @@ const Menu: React.FC<MenuProps> = ({
     );
   }
 
-
   if (!isMobile) {
     return (
-      <nav className="hidden md:block">
+      <nav className=" hidden md:block ">
         <ul className="flex gap-6 lg:gap-6 text-sm lg:text-sm xl:text-base tracking-widest font-light uppercase">
           {menuItems.map((item) => (
             <li key={item.name} className="relative">
@@ -73,7 +71,7 @@ const Menu: React.FC<MenuProps> = ({
                     <span
                       className={[
                         "transition-colors duration-300",
-                        "group-hover:text-[#ecc29c]",
+                        "group-hover:text-[#ecc29c] ",
                         isActive ? "text-[#ecc29c]" : "",
                       ].join(" ")}
                     >
@@ -83,7 +81,7 @@ const Menu: React.FC<MenuProps> = ({
                       className={[
                         "absolute -bottom-1 left-0 h-px bg-[#ecc29c] transition-all duration-300",
                         "group-hover:w-full",
-                        isActive ? "w-full" : "w-0",
+                        isActive ? "w-full " : "w-0",
                       ].join(" ")}
                     />
                   </>
@@ -96,9 +94,8 @@ const Menu: React.FC<MenuProps> = ({
     );
   }
 
-
   return (
-    <nav className="py-4">
+    <nav className="bg-[#f9f3e9] py-4">
       {menuItems.map((item, index) => (
         <NavLink
           key={item.name}
